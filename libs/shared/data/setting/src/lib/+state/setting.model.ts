@@ -28,3 +28,10 @@ export interface SettingEntity {
   theme: Theme;
   fontSize: FontSizeEntity;
 }
+
+export interface DataStatus {
+  loading: boolean;
+  loaded: boolean;
+  //eslint-disable-next-line  @typescript-eslint/no-explicit-any
+  error?: any;
+}

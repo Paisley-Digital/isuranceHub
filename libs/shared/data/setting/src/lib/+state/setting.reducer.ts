@@ -1,23 +1,45 @@
 import { Action, createReducer, on } from '@ngrx/store';
 
-import { DataStatus } from '@baam/shared/util/store';
 import * as SettingActions from './setting.actions';
-import { ColorPalette, ColorScheme, FontSizeEntity, SettingEntity } from './setting.models';
-import { COLOR_PALETTES, fontSizes, LANGUAGES, StorageKey } from './setting.constants';
-import { findColorPaletteByName, findFontSizeBySize, findLanguageByCode } from './setting.utils';
+import {
+  ColorPalette,
+  ColorScheme,
+  FontSizeEntity,
+  SettingEntity,
+  DataStatus,
+} from './setting.model';
+import {
+  COLOR_PALETTES,
+  fontSizes,
+  LANGUAGES,
+  StorageKey,
+} from './setting.constants';
+import {
+  findColorPaletteByName,
+  findFontSizeBySize,
+  findLanguageByCode,
+} from './setting.utils';
 
 export const SETTING_FEATURE_KEY = 'setting';
 
-const initialLanguage = findLanguageByCode(localStorage.getItem(StorageKey.PREFERRED_LANGUAGE)) ?? LANGUAGES[0];
+const initialLanguage =
+  findLanguageByCode(localStorage.getItem(StorageKey.PREFERRED_LANGUAGE)) ??
+  LANGUAGES[0];
 
 const initialColorPalette: ColorPalette =
-  findColorPaletteByName(localStorage.getItem(StorageKey.PREFERRED_COLOR_PALETTE)) ?? COLOR_PALETTES[0];
+  findColorPaletteByName(
+    localStorage.getItem(StorageKey.PREFERRED_COLOR_PALETTE)
+  ) ?? COLOR_PALETTES[0];
 
 const initialColorScheme: ColorScheme =
-  (localStorage.getItem(StorageKey.PREFERRED_COLOR_SCHEME) as ColorScheme | null) ?? 'light';
+  (localStorage.getItem(
+    StorageKey.PREFERRED_COLOR_SCHEME
+  ) as ColorScheme | null) ?? 'light';
 
 const initialFontSize: FontSizeEntity =
-  findFontSizeBySize(Number(localStorage.getItem(StorageKey.PREFERRED_FONT_SIZE))) ?? fontSizes[0];
+  findFontSizeBySize(
+    Number(localStorage.getItem(StorageKey.PREFERRED_FONT_SIZE))
+  ) ?? fontSizes[0];
 
 export interface State extends SettingEntity, Pick<DataStatus, 'error'> {}
 
@@ -33,17 +55,24 @@ export const initialState: State = {
 
 const settingReducer = createReducer(
   initialState,
-  on(SettingActions.init, state => ({ ...state, error: null })),
-  on(SettingActions.loadSettingSuccess, (state, { languageCode, colorPaletteName, colorScheme }) => ({
+  on(SettingActions.init, (state) => ({ ...state, error: null })),
+  on(
+    SettingActions.loadSettingSuccess,
+    (state, { languageCode, colorPaletteName, colorScheme }) => ({
+      ...state,
+      error: null,
+      language: findLanguageByCode(languageCode) ?? LANGUAGES[0],
+      theme: {
+        colorScheme: colorScheme ?? 'light',
+        colorPalette:
+          findColorPaletteByName(colorPaletteName) ?? COLOR_PALETTES[0],
+      },
+    })
+  ),
+  on(SettingActions.loadSettingFailure, (state, { error }) => ({
     ...state,
-    error: null,
-    language: findLanguageByCode(languageCode) ?? LANGUAGES[0],
-    theme: {
-      colorScheme: colorScheme ?? 'light',
-      colorPalette: findColorPaletteByName(colorPaletteName) ?? COLOR_PALETTES[0],
-    },
+    error,
   })),
-  on(SettingActions.loadSettingFailure, (state, { error }) => ({ ...state, error })),
   on(SettingActions.changeLanguage, (state, { languageCode }) => ({
     ...state,
     language: findLanguageByCode(languageCode) ?? LANGUAGES[0],
@@ -52,7 +81,8 @@ const settingReducer = createReducer(
     ...state,
     theme: {
       ...state.theme,
-      colorPalette: findColorPaletteByName(colorPaletteName) ?? COLOR_PALETTES[0],
+      colorPalette:
+        findColorPaletteByName(colorPaletteName) ?? COLOR_PALETTES[0],
     },
   })),
   on(SettingActions.changeColorScheme, (state, { colorScheme }) => ({
@@ -66,7 +96,8 @@ const settingReducer = createReducer(
   on(SettingActions.changeFontSize, (state, { size }) => {
     return {
       ...state,
-      fontSize: fontSizes.find(fontSize => fontSize.size === size) ?? initialFontSize,
+      fontSize:
+        fontSizes.find((fontSize) => fontSize.size === size) ?? initialFontSize,
     };
   })
 );

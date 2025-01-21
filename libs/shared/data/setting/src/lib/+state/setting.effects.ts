@@ -5,8 +5,8 @@ import { SettingUtils } from './setting.utils';
 import * as SettingActions from './setting.actions';
 import { StorageKey } from './setting.constants';
 import { ColorScheme } from './setting.model';
-import { Observable, tap } from 'rxjs';
-import { pessimisticUpdate } from '@nx/angular';
+import { tap } from 'rxjs';
+import { fetch, pessimisticUpdate } from '@nx/angular';
 
 @Injectable()
 export class SettingEffects {

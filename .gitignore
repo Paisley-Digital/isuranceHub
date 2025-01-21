@@ -1,21 +1,29 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
-dist
-tmp
-out-tsc
+/dist
+/tmp
+/out-tsc
 
 # dependencies
 node_modules
 
 # IDEs and editors
-/.idea
 .project
 .classpath
 .c9/
 *.launch
 .settings/
 *.sublime-workspace
+
+# IDE - IDEA
+/.idea
+!.idea/modules.xml
+!.idea/vcs.xml
+!.idea/.gitignore
+!.idea/inspectionProfiles
+!.idea/baam.iml
+
 
 # IDE - VSCode
 .vscode/*
@@ -30,6 +38,7 @@ node_modules
 /coverage
 /libpeerconnection.log
 npm-debug.log
+.pnpm-debug.log
 yarn-error.log
 testem.log
 /typings
@@ -38,7 +47,12 @@ testem.log
 .DS_Store
 Thumbs.db
 
-.nx/cache
-.nx/workspace-data
-
 .angular
+/.vscode/
+
+# Firebase
+.firebase
+*-debug.log
+.runtimeconfig.json
+
+.nx/cache

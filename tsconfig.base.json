@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@./common": ["libs/shared/util/common/src/index.ts"]
+      "@./common": ["libs/shared/util/common/src/index.ts"],
+      "@./tailwind-preset": ["libs/shared/util/tailwind-preset/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

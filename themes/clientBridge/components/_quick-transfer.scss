@@ -1,0 +1,53 @@
+.quick-transfer-add-checkbox-content {
+  @apply overflow-scroll p-0 #{!important};
+  // For Firefox
+  scrollbar-width: none;
+  // For Edge
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    @apply hidden;
+  }
+
+  .quick-transfer-add-option {
+    @apply border-foreground/10 border-b border-solid px-4 py-12 #{!important};
+    &:last-child {
+      @apply border-0 #{!important};
+    }
+  }
+}
+
+.quick-transfer-list {
+  @apply bg-card overflow-x-hidden #{!important};
+  // For Firefox
+  scrollbar-width: none;
+  // For Edge
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    @apply hidden;
+  }
+
+  &.cdk-drop-list-dragging .quick-transfer-card:not(.cdk-drag-placeholder) {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.quick-transfer-card {
+  @apply bg-card text-foreground #{!important};
+
+  &.cdk-drag-preview {
+    box-sizing: border-box;
+    border-radius: 4px;
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14),
+      0 3px 14px 2px rgba(0, 0, 0, 0.12);
+  }
+
+  &.cdk-drag-placeholder {
+    opacity: 0;
+  }
+
+  &.cdk-drag-animating {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+  }
+}

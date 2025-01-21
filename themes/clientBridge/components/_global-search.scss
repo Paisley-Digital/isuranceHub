@@ -1,0 +1,38 @@
+baam-search {
+  .global-search-items-wrapper {
+    @apply invisible m-0 max-h-0 overflow-hidden opacity-0 duration-300;
+  }
+
+  .global-search-items-wrapper-visible {
+    @apply visible max-h-max opacity-100;
+  }
+
+  .global-search-result-item {
+    @apply mat-subtitle-2;
+    @apply text-foreground/60 bg-background hover:text-primary my-2 me-3 inline-block rounded-full px-3 py-2 font-normal #{!important};
+  }
+
+  .contacts-container {
+    @apply h-28;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      @apply hidden;
+    }
+
+    .cdk-virtual-scroll-content-wrapper {
+      @apply -mb-4 mt-4 flex min-h-0 scroll-px-4 gap-2 px-4 pb-4 #{!important};
+    }
+  }
+
+  .scroll-button {
+    @apply bg-foreground text-background absolute flex content-center items-center py-6 opacity-10 transition-opacity hover:opacity-20 #{!important};
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .mat-mdc-form-field-subscript-wrapper {
+    @apply hidden #{!important};
+  }
+}

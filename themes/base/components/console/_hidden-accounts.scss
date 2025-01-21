@@ -1,0 +1,7 @@
+baam-hidden-account-dialog {
+  .hidden-account-card {
+    @apply border border-solid border-foreground/5 rounded-xl overflow-hidden mat-elevation-z0 shadow-none bg-foreground/5 #{!important};
+    background-image: url(#{$path-to-images}/account/hidden-account.svg) !important;
+    background-size: cover;
+  }
+}

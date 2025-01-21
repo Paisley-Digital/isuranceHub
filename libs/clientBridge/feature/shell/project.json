@@ -1,5 +1,5 @@
 {
-  "name": "shell",
+  "name": "insurance-clientBridge-shell",
   "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/clientBridge/feature/shell/src",
   "prefix": "insurance",

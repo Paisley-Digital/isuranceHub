@@ -18,18 +18,27 @@
       "@insurance-brokerAdmin-feature-auth": [
         "libs/brokerAdmin/feature/auth/src/index.ts"
       ],
-      "@insurance-brokerAdmin-feature-shell": ["libs/brokerAdmin/feature/shell/src/index.ts"],
+      "@insurance-brokerAdmin-feature-shell": [
+        "libs/brokerAdmin/feature/shell/src/index.ts"
+      ],
       "@insurance-clientBridge-feature-auth": [
         "libs/clientBridge/feature/auth/src/index.ts"
       ],
       "@insurance-clientBridge-feature-shell": [
         "libs/clientBridge/feature/shell/src/index.ts"
       ],
+      "@insurance-shared-data-setting": [
+        "libs/shared/data/setting/src/index.ts"
+      ],
       "@insurance-shared-ui-alert": ["libs/shared/ui/alert/src/index.ts"],
       "@insurance-shared-util-common": ["libs/shared/util/common/src/index.ts"],
+      "@insurance-shared-util-local-storage": [
+        "libs/shared/util/local-storage/src/index.ts"
+      ],
       "@insurance-shared-util-tailwind-preset": [
         "libs/shared/util/tailwind-preset/src/index.ts"
-      ]
+      ],
+      "@insurance-shared-util-web-sdk": ["libs/shared/util/web-sdk/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -15,9 +15,12 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@insurance-clientBridge-feature-auth": ["libs/clientBridge/feature/auth/src/index.ts"],
-      "@./common": ["libs/shared/util/common/src/index.ts"],
-      "@./tailwind-preset": ["libs/shared/util/tailwind-preset/src/index.ts"]
+      "@insurance-shared-util-common": ["libs/shared/util/common/src/index.ts"],
+      "@insurance-clientBridge-feature-auth": [
+        "libs/clientBridge/feature/auth/src/index.ts"
+      ],
+      "@insurance-clientBridge-feature-shell": ["libs/clientBridge/feature/shell/src/index.ts"],
+      "@insurance-shared-util-tailwind-preset": ["libs/shared/util/tailwind-preset/src/index.ts"],
     }
   },
   "exclude": ["node_modules", "tmp"]

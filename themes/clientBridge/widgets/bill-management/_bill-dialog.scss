@@ -1,0 +1,14 @@
+baam-bill-inquiry-confirmation-dialog {
+  dl {
+    @apply my-4 grid w-full grid-cols-5;
+
+    dt {
+      @apply col-span-2 flex items-center justify-start whitespace-nowrap;
+      min-height: 36px;
+    }
+
+    dd {
+      @apply col-span-3 flex items-center justify-end gap-1;
+    }
+  }
+}

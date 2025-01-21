@@ -1,0 +1,22 @@
+baam-vehicle-list {
+  .vehicle-list-card {
+    @apply border-foreground/10 flex flex-col border border-solid p-0 shadow-none #{!important};
+  }
+
+  .mat-mdc-card-header-text {
+    @apply mx-0 #{!important};
+  }
+
+  dl {
+    @apply my-4 grid w-full grid-cols-6 #{!important};
+
+    dt {
+      @apply col-span-2 flex items-center justify-start whitespace-nowrap;
+      min-height: 36px;
+    }
+
+    dd {
+      @apply col-span-4 flex items-center justify-end gap-1;
+    }
+  }
+}

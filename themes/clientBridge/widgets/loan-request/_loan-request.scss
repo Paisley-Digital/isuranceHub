@@ -1,0 +1,48 @@
+baam-loan-request-requested {
+  .loan-request-empty-state {
+    .icon-container {
+      @apply border-foreground/10 text-primary flex items-center justify-center rounded-xl border border-solid p-3 #{!important};
+    }
+
+    ul {
+      @apply list-disc ps-8 #{!important};
+
+      li {
+        @apply py-2;
+      }
+    }
+  }
+}
+
+baam-loan-request-tabs-container {
+  .loan-request-tab-group {
+    //border-foreground/10 !mb-6 !mt-2 border-b border-solid
+    @apply border-foreground/10 mb-6 mt-2 border-b border-solid #{!important};
+    [role='tab'] {
+      @apply w-1/2 #{!important};
+    }
+
+    [role='tabpanel'] {
+      @apply pt-6 #{!important};
+    }
+  }
+}
+
+.installment-key-value-grid {
+  @apply grid gap-y-6 pt-3;
+  dl {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    display: grid;
+  }
+
+  dt {
+    color: rgb(var(--foreground-color), 0.6);
+  }
+
+  dd {
+    font-weight: 500;
+    display: flex;
+    justify-content: flex-end;
+    color: rgb(var(--foreground-color), 0.9);
+  }
+}

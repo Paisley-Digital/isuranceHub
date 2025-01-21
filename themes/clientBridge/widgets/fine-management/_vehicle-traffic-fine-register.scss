@@ -1,0 +1,43 @@
+baam-vehicle-traffic-fine-register {
+  .mat-mdc-tab-body-wrapper {
+    @apply pt-4;
+  }
+
+  .motorcycle-Plate-wrapper {
+    @apply m-auto flex w-28 flex-wrap justify-between gap-3;
+    mat-form-field {
+      &:first-child {
+        .mat-mdc-form-field-bottom-align {
+          @apply hidden;
+        }
+      }
+    }
+  }
+}
+
+.plate-information-key-value-grid {
+  row-gap: 1rem;
+  display: grid;
+
+  dl {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    display: grid;
+  }
+
+  dt {
+    color: rgb(var(--foreground-color), 0.6);
+  }
+
+  dd {
+    font-weight: 500;
+    display: flex;
+    justify-content: flex-end;
+    color: rgb(var(--foreground-color), 0.9);
+  }
+}
+
+.plate-letter-list {
+  span {
+    @apply bg-background flex h-12 cursor-pointer items-center justify-center rounded-lg  text-base  font-medium;
+  }
+}

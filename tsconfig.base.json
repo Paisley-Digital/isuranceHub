@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@insurance-clientBridge-feature-auth": ["libs/clientBridge/feature/auth/src/index.ts"],
       "@./common": ["libs/shared/util/common/src/index.ts"],
       "@./tailwind-preset": ["libs/shared/util/tailwind-preset/src/index.ts"]
     }

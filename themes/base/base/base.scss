@@ -2,7 +2,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import '../fonts/poppins';
 
 $path-to-fonts: '^./assets/fonts';
 
@@ -13,12 +12,12 @@ $path-to-fonts: '^./assets/fonts';
   src: url('#{$path-to-fonts}/poppins/Poppins-light.woff2') format('woff');
 }
 
-$font-family-iransans-fa: 'Poppins', sans-serif;
+$font-family-poppins: 'Poppins', sans-serif;
 
 html,
 body {
   @apply h-full;
-  font-family: $font-family-iransans-fa;
+  font-family: $font-family-poppins;
 }
 
 body {

@@ -4,7 +4,7 @@ const colors = require('tailwindcss/colors');
 module.exports = {
   darkMode: ['class', 'body.color-scheme-dark'],
   corePlugins: {
-    preflight: true,
+    preflight: false,
   },
   theme: {
     screens: {

@@ -12,6 +12,7 @@ import {
 } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
+import { ErrorMessageComponent } from '@insurance-shared-ui-input-validation-message';
 @Component({
   selector: 'insurance-client-bridge-feature-auth',
   imports: [
@@ -24,6 +25,7 @@ import { MatInputModule } from '@angular/material/input';
     MatIconModule,
     MatInputModule,
     MatButtonModule,
+    ErrorMessageComponent,
   ],
   templateUrl: './clientBridge-feature-auth.component.html',
   styleUrl: './clientBridge-feature-auth.component.scss',

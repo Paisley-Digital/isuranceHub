@@ -31,6 +31,9 @@
         "libs/shared/data/setting/src/index.ts"
       ],
       "@insurance-shared-ui-alert": ["libs/shared/ui/alert/src/index.ts"],
+      "@insurance-shared-util-app-core": [
+        "libs/shared/util/app-core/src/index.ts"
+      ],
       "@insurance-shared-util-common": ["libs/shared/util/common/src/index.ts"],
       "@insurance-shared-util-local-storage": [
         "libs/shared/util/local-storage/src/index.ts"
@@ -41,7 +44,9 @@
       "@insurance-shared-util-web-sdk": [
         "libs/shared/util/web-sdk/src/index.ts"
       ],
-      "@insurance-shared-util-app-core": ["libs/shared/util/app-core/src/index.ts"]
+      "@insurance-shared-ui-input-validation-message": [
+        "libs/shared/ui/input-validation-message/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

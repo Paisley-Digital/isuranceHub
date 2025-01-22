@@ -31,13 +31,12 @@
 <ng-template #loginTemplate>
   <form class="flex h-full flex-col" [formGroup]="loginForm">
     <div class="flex flex-1 flex-col">
-      <mat-form-field appearance="outline">
-        <mat-label>Input</mat-label>
-        <input matInput>
-      </mat-form-field>
       <mat-form-field appearance="outline" hideRequiredMarker>
         <mat-label>Your name</mat-label>
         <input matInput formControlName="userName" />
+        <mat-error>
+          <insurance-error-message [input]="loginForm.get('userName')"/>
+        </mat-error>
       </mat-form-field>
       <mat-form-field appearance="outline" hideRequiredMarker>
         <mat-label>Your Password</mat-label>
@@ -45,6 +44,7 @@
           matInput
           formControlName="password" />
         <mat-error>
+          <insurance-error-message [input]="loginForm.get('password')"/>
         </mat-error>
       </mat-form-field>
       <div class="mt-3 flex items-start justify-end">

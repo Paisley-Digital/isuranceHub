@@ -18,6 +18,13 @@ import { provideStoreDevtools } from '@ngrx/store-devtools';
 import { provideSharedUtilAppCore } from '@insurance-shared-util-app-core';
 import { environment } from '../environments/environment';
 import { provideAnimations } from '@angular/platform-browser/animations';
+import { overrideLocaleData } from '@insurance-clientBridge-shared-util-locales';
+
+function initializeEnvironment() {
+  const localeId = inject(LOCALE_ID);
+
+  overrideLocaleData(localeId);
+}
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -40,6 +47,11 @@ export const appConfig: ApplicationConfig = {
       logOnly: !isDevMode(),
       connectInZone: true,
     }),
+    {
+      provide: ENVIRONMENT_INITIALIZER,
+      multi: true,
+      useValue: initializeEnvironment,
+    },
     provideSharedDataSetting(),
     provideSharedUtilAppCore(environment),
     StoreRouterConnectingModule,

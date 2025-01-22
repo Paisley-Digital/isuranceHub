@@ -1,7 +1,10 @@
 import {
   ApplicationConfig,
+  ENVIRONMENT_INITIALIZER,
   importProvidersFrom,
+  inject,
   isDevMode,
+  LOCALE_ID,
   provideZoneChangeDetection,
 } from '@angular/core';
 import { provideRouter } from '@angular/router';
@@ -12,6 +15,13 @@ import { MAT_DEFAULT_OPTIONS_OVERRIDES } from '@insurance-shared-util-web-sdk';
 import { provideStore } from '@ngrx/store';
 import { provideEffects } from '@ngrx/effects';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
+import { overrideLocaleData } from '@insurance-clientBridge-shared-util-locales';
+
+function initializeEnvironment() {
+  const localeId = inject(LOCALE_ID);
+
+  overrideLocaleData(localeId);
+}
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -33,6 +43,11 @@ export const appConfig: ApplicationConfig = {
       logOnly: !isDevMode(),
       connectInZone: true,
     }),
+    {
+      provide: ENVIRONMENT_INITIALIZER,
+      multi: true,
+      useValue: initializeEnvironment,
+    },
     importProvidersFrom(),
     provideSharedDataSetting(),
     ...MAT_DEFAULT_OPTIONS_OVERRIDES,

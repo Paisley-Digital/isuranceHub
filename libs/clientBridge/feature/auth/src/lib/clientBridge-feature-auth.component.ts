@@ -12,7 +12,6 @@ import {
 } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
-
 @Component({
   selector: 'insurance-client-bridge-feature-auth',
   imports: [

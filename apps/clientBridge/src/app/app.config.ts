@@ -1,6 +1,9 @@
 import {
   ApplicationConfig,
+  ENVIRONMENT_INITIALIZER,
+  inject,
   isDevMode,
+  LOCALE_ID,
   provideZoneChangeDetection,
 } from '@angular/core';
 import { provideRouter } from '@angular/router';
@@ -12,10 +15,14 @@ import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { provideStore } from '@ngrx/store';
 import { provideEffects } from '@ngrx/effects';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
+import { provideSharedUtilAppCore } from '@insurance-shared-util-app-core';
+import { environment } from '../environments/environment';
+import { provideAnimations } from '@angular/platform-browser/animations';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
+    provideAnimations(),
     provideRouter(appRoutes),
     provideSharedUiAlert(),
     provideStore(
@@ -34,6 +41,7 @@ export const appConfig: ApplicationConfig = {
       connectInZone: true,
     }),
     provideSharedDataSetting(),
+    provideSharedUtilAppCore(environment),
     StoreRouterConnectingModule,
     ...MAT_DEFAULT_OPTIONS_OVERRIDES,
   ],

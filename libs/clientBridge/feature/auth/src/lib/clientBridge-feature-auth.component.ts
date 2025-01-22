@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { isHandsetScreen } from '@insurance-shared-util-common';
@@ -34,10 +34,17 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 })
 export class ClientBridgeFeatureAuthComponent {
   private formBuilder = inject(FormBuilder);
+
   isHandsetScreen$ = isHandsetScreen();
+
+  showPassword = signal(false);
 
   loginForm = this.formBuilder.group({
     userName: ['', Validators.required],
     password: ['', Validators.required],
   });
+
+  isShowPassword() {
+    this.showPassword.update((current) => !current);
+  }
 }

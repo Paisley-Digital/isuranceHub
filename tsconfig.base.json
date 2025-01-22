@@ -37,6 +37,7 @@
       "@insurance-shared-ui-input-validation-message": [
         "libs/shared/ui/input-validation-message/src/index.ts"
       ],
+      "@insurance-shared-ui-spinner": ["libs/shared/ui/spinner/src/index.ts"],
       "@insurance-shared-util-app-core": [
         "libs/shared/util/app-core/src/index.ts"
       ],
@@ -50,7 +51,7 @@
       "@insurance-shared-util-web-sdk": [
         "libs/shared/util/web-sdk/src/index.ts"
       ],
-      "@insurance-shared-ui-spinner": ["libs/shared/ui/spinner/src/index.ts"]
+      "@insurance-shared-ui-icon": ["libs/clientBridge/shared/ui/icon/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

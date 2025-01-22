@@ -19,10 +19,13 @@ import { provideSharedUtilAppCore } from '@insurance-shared-util-app-core';
 import { environment } from '../environments/environment';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { overrideLocaleData } from '@insurance-clientBridge-shared-util-locales';
+import { clientBridgeSharedUiIconRegister } from '@insurance-shared-ui-icon';
+import { provideHttpClient } from '@angular/common/http';
 
 function initializeEnvironment() {
   const localeId = inject(LOCALE_ID);
 
+  clientBridgeSharedUiIconRegister();
   overrideLocaleData(localeId);
 }
 
@@ -30,6 +33,7 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideAnimations(),
+    provideHttpClient(),
     provideRouter(appRoutes),
     provideSharedUiAlert(),
     provideStore(

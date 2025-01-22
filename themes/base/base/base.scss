@@ -1,0 +1,27 @@
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import '../fonts/poppins';
+
+$path-to-fonts: '^./assets/fonts';
+
+@font-face {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  src: url('#{$path-to-fonts}/poppins/Poppins-light.woff2') format('woff');
+}
+
+$font-family-iransans-fa: 'Poppins', sans-serif;
+
+html,
+body {
+  @apply h-full;
+  font-family: $font-family-iransans-fa;
+}
+
+body {
+  margin: 0 !important;
+  @apply bg-card;
+}

@@ -34,6 +34,7 @@ module.exports = {
       foreground: 'rgb(var(--foreground-color), <alpha-value>)',
       background: 'rgb(var(--background-color), <alpha-value>)',
       card: 'rgb(var(--card-background-color), <alpha-value>)',
+      insurance: '#7F56D9',
       primary: {
         50: 'rgb(var(--primary-color-50), <alpha-value>)',
         100: 'rgb(var(--primary-color-100), <alpha-value>)',

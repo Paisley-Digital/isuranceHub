@@ -1,6 +1,6 @@
 import { Route } from '@angular/router';
-import { ProductsComponent } from './products.component';
+import { ClientBridgeFeatureProductsComponent } from './clientBridge-feature-products.component';
 
 export const productsRoutes: Route[] = [
-  { path: '', component: ProductsComponent },
+  { path: '', component: ClientBridgeFeatureProductsComponent },
 ];

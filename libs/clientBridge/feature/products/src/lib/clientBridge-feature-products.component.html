@@ -1,1 +1,55 @@
-<p>clientBridge-feature-products works!</p>
+<div class="card-container">
+  <mat-card class="widget-card max-md-widget">
+    <mat-card-content>
+      <form [formGroup]="uploadForm" class="flex flex-col h-full">
+        <h1>Personal information</h1>
+        <mat-form-field hideRequiredMarker>
+          <mat-label>Inter your first name</mat-label>
+          <input matInput formControlName="userName" />
+          <mat-error>
+            <insurance-error-message [input]="uploadForm.get('name')" />
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field hideRequiredMarker>
+          <mat-label>Your birthday</mat-label>
+          <input matInput formControlName="userName" />
+          <mat-error>
+            <insurance-error-message [input]="uploadForm.get('birthDate')" />
+          </mat-error>
+          <button type="button" mat-icon-button matSuffix>
+            <mat-icon svgIcon="calendar" />
+          </button>
+        </mat-form-field>
+        <mat-form-field hideRequiredMarker>
+          <mat-label>Your national code</mat-label>
+          <input
+            matInput
+            formControlName="ntionalCode"
+            inputmode="numeric"
+            pattern="\d*"
+          />
+          <mat-error>
+            <insurance-error-message [input]="uploadForm.get('nationalCode')" />
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field hideRequiredMarker>
+          <mat-label>Your number</mat-label>
+          <input matInput formControlName="number" />
+          <mat-error>
+            <insurance-error-message [input]="uploadForm.get('number')" />
+          </mat-error>
+          <button type="button" mat-icon-button matSuffix>
+            <mat-icon svgIcon="phone" />
+          </button>
+        </mat-form-field>
+        <mat-form-field hideRequiredMarker>
+          <mat-label>Address</mat-label>
+          <input matInput formControlName="address" />
+          <mat-error>
+            <insurance-error-message [input]="uploadForm.get('address')" />
+          </mat-error>
+        </mat-form-field>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

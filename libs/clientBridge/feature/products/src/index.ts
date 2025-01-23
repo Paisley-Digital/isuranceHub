@@ -1,3 +1,3 @@
 export * from './lib/lib.routes';
 
-export * from './lib/products.component';
+export * from './lib/clientBridge-feature-products.component';

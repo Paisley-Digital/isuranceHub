@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@./products": ["libs/clientBridge/feature/products/src/index.ts"],
       "@insurance-brokerAdmin-feature-auth": [
         "libs/brokerAdmin/feature/auth/src/index.ts"
       ],
@@ -34,6 +35,9 @@
         "libs/shared/data/setting/src/index.ts"
       ],
       "@insurance-shared-ui-alert": ["libs/shared/ui/alert/src/index.ts"],
+      "@insurance-shared-ui-header-desktop": [
+        "libs/shared/ui/header-desktop/src/index.ts"
+      ],
       "@insurance-shared-ui-icon": [
         "libs/clientBridge/shared/ui/icon/src/index.ts"
       ],
@@ -54,7 +58,7 @@
       "@insurance-shared-util-web-sdk": [
         "libs/shared/util/web-sdk/src/index.ts"
       ],
-      "@insurance-shared-ui-header-desktop": ["libs/shared/ui/header-desktop/src/index.ts"]
+      "@insurance-clientBridge-feature-products": ["libs/clientBridge/feature/products/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

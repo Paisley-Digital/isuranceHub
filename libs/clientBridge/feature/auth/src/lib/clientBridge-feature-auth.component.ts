@@ -14,6 +14,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { ErrorMessageComponent } from '@insurance-shared-ui-input-validation-message';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { Router } from '@angular/router';
 @Component({
   selector: 'insurance-client-bridge-feature-auth',
   imports: [
@@ -34,6 +35,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 })
 export class ClientBridgeFeatureAuthComponent {
   private formBuilder = inject(FormBuilder);
+  private router = inject(Router);
 
   isHandsetScreen$ = isHandsetScreen();
 
@@ -46,5 +48,12 @@ export class ClientBridgeFeatureAuthComponent {
 
   isShowPassword() {
     this.showPassword.update((current) => !current);
+  }
+
+  navigateToProduct() {
+    if (this.loginForm.invalid) {
+      return;
+    }
+    this.router.navigate(['/console']);
   }
 }

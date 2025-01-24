@@ -16,8 +16,6 @@ export const appRoutes: Route[] = [
     path: 'console',
     canActivateChild: [authGuard],
     loadChildren: () =>
-      import('@insurance-clientBridge-feature-shell').then(
-        (m) => m.shellRoutes
-      ),
+      import('@insurance-brokerAdmin-feature-shell').then((m) => m.shellRoutes),
   },
 ];

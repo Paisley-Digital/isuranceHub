@@ -8,21 +8,33 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/brokerAdmin",
         "index": "apps/brokerAdmin/src/index.html",
         "main": "apps/brokerAdmin/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [
+          "zone.js"
+        ],
         "tsConfig": "apps/brokerAdmin/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
           {
+            "input": "libs/shared/assets/src/assets",
             "glob": "**/*",
-            "input": "apps/brokerAdmin/public"
+            "output": "assets"
+          },
+          {
+            "input": "libs/shared/assets/src/assets",
+            "glob": "**/*",
+            "output": "assets"
           }
         ],
-        "styles": ["apps/brokerAdmin/src/styles.scss"],
+        "styles": [
+          "themes/base/main.scss"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -75,7 +87,9 @@
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
         "jestConfig": "apps/brokerAdmin/jest.config.ts"
       }

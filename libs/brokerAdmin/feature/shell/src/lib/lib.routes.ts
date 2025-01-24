@@ -1,5 +1,6 @@
 import { Route } from '@angular/router';
 import { BrokerAdminFeatureShellComponent } from './brokerAdmin-feature-shell.component';
+import { insuranceFeatureUserManagementRoutes } from '../../../user-management/src';
 
 export const shellRoutes: Route[] = [
   {
@@ -9,7 +10,14 @@ export const shellRoutes: Route[] = [
       {
         path: '',
         pathMatch: 'full',
-        redirectTo: 'home',
+        redirectTo: 'userManagement',
+      },
+      {
+        path: 'userManagement',
+        loadChildren: () =>
+          import('@insurance-brokerAdmin-feature-user-management').then(
+            (m) => m.insuranceFeatureUserManagementRoutes
+          ),
       },
     ],
   },

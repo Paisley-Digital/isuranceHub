@@ -1,0 +1,1946 @@
+{
+  "version": "6.0",
+  "nxVersion": "20.3.2",
+  "pathMappings": {
+    "@insurance-brokerAdmin-feature-user-management": [
+      "libs/brokerAdmin/feature/user-management/src/index.ts"
+    ],
+    "@./products": [
+      "libs/clientBridge/feature/products/src/index.ts"
+    ],
+    "@insurance-brokerAdmin-feature-auth": [
+      "libs/brokerAdmin/feature/auth/src/index.ts"
+    ],
+    "@insurance-brokerAdmin-feature-shell": [
+      "libs/brokerAdmin/feature/shell/src/index.ts"
+    ],
+    "@insurance-clientBridge-feature-auth": [
+      "libs/clientBridge/feature/auth/src/index.ts"
+    ],
+    "@insurance-clientBridge-feature-products": [
+      "libs/clientBridge/feature/products/src/index.ts"
+    ],
+    "@insurance-clientBridge-feature-shell": [
+      "libs/clientBridge/feature/shell/src/index.ts"
+    ],
+    "@insurance-clientBridge-shared-util-locales": [
+      "libs/shared/util/locales/src/index.ts"
+    ],
+    "@insurance-shared-data-setting": [
+      "libs/shared/data/setting/src/index.ts"
+    ],
+    "@insurance-shared-ui-alert": [
+      "libs/shared/ui/alert/src/index.ts"
+    ],
+    "@insurance-shared-ui-header-desktop": [
+      "libs/shared/ui/header-desktop/src/index.ts"
+    ],
+    "@insurance-shared-ui-icon": [
+      "libs/clientBridge/shared/ui/icon/src/index.ts"
+    ],
+    "@insurance-shared-ui-input-validation-message": [
+      "libs/shared/ui/input-validation-message/src/index.ts"
+    ],
+    "@insurance-shared-ui-spinner": [
+      "libs/shared/ui/spinner/src/index.ts"
+    ],
+    "@insurance-shared-util-app-core": [
+      "libs/shared/util/app-core/src/index.ts"
+    ],
+    "@insurance-shared-util-common": [
+      "libs/shared/util/common/src/index.ts"
+    ],
+    "@insurance-shared-util-local-storage": [
+      "libs/shared/util/local-storage/src/index.ts"
+    ],
+    "@insurance-shared-util-tailwind-preset": [
+      "libs/shared/util/tailwind-preset/src/index.ts"
+    ],
+    "@insurance-shared-util-web-sdk": [
+      "libs/shared/util/web-sdk/src/index.ts"
+    ]
+  },
+  "nxJsonPlugins": [
+    {
+      "name": "@nx/cypress/plugin",
+      "options": {
+        "targetName": "e2e",
+        "openTargetName": "open-cypress",
+        "componentTestingTargetName": "component-test",
+        "ciTargetName": "e2e-ci"
+      }
+    },
+    {
+      "name": "@nx/eslint/plugin",
+      "options": {
+        "targetName": "lint"
+      }
+    }
+  ],
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": ".editorconfig",
+        "hash": "11532813898455409296"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "11839270909640672535"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "12269743867629339573"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "6820402234827505055"
+      },
+      {
+        "file": "README.md",
+        "hash": "3473678477709737235"
+      },
+      {
+        "file": "decorate-angular-cli.js",
+        "hash": "8993334188159399988"
+      },
+      {
+        "file": "eslint.config.cjs",
+        "hash": "13933208012680746256"
+      },
+      {
+        "file": "jest.config.ts",
+        "hash": "7544409015863045561"
+      },
+      {
+        "file": "jest.preset.js",
+        "hash": "7473220183190921152"
+      },
+      {
+        "file": "nx.json",
+        "hash": "14091271894383759951"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "17727548368546057482"
+      },
+      {
+        "file": "package.json",
+        "hash": "14815548391701187583"
+      },
+      {
+        "file": "themes/base/base/base.scss",
+        "hash": "15577027193536102585"
+      },
+      {
+        "file": "themes/base/fonts/fonts.scss",
+        "hash": "6019803906585319606"
+      },
+      {
+        "file": "themes/base/fonts/poppins.scss",
+        "hash": "2491197989646181309"
+      },
+      {
+        "file": "themes/base/main.scss",
+        "hash": "15439567661949980688"
+      },
+      {
+        "file": "themes/base/overrides/_mat-button.scss",
+        "hash": "1168984626846491298"
+      },
+      {
+        "file": "themes/base/overrides/_mat-form-field.scss",
+        "hash": "16651453656088579760"
+      },
+      {
+        "file": "themes/base/overrides/_mat-toolbar.scss",
+        "hash": "15471507308091304047"
+      },
+      {
+        "file": "themes/base/overrides/overrides.scss",
+        "hash": "16214068328004741009"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "5078234977784621208"
+      }
+    ],
+    "projectFileMap": {
+      "insurance-feature-user-management": [
+        {
+          "file": "libs/brokerAdmin/feature/user-management/README.md",
+          "hash": "14924015563342403908"
+        },
+        {
+          "file": "libs/brokerAdmin/feature/user-management/eslint.config.cjs",
+          "hash": "5408504881153388323",
+          "deps": [
+            "npm:@nx/eslint-plugin"
+          ]
+        },
+        {
+          "file": "libs/brokerAdmin/feature/user-management/jest.config.ts",
+          "hash": "354792064312714888"
+        },
+        {
+          "file": "libs/brokerAdmin/feature/user-management/project.json",
+          "hash": "12693719659045299122"
+        },
+        {
+          "file": "libs/brokerAdmin/feature/user-management/src/index.ts",
+          "hash": "11286783854724817012"
+        },
+        {
+          "file": "libs/brokerAdmin/feature/user-management/src/lib/insurance-feature-user-management.component.html",
+          "hash": "13997530596451475340"
+        },
+        {
+          "file": "libs/brokerAdmin/feature/user-management/src/lib/insurance-feature-user-management.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "libs/brokerAdmin/feature/user-management/src/lib/insurance-feature-user-management.component.spec.ts",
+          "hash": "4227726670417760217",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/brokerAdmin/feature/user-management/src/lib/insurance-feature-user-management.component.ts",
+          "hash": "8424232145437905180",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "libs/brokerAdmin/feature/user-management/src/lib/lib.routes.ts",
+          "hash": "11471784244067682773",
+          "deps": [
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "libs/brokerAdmin/feature/user-management/src/test-setup.ts",
+          "hash": "1917999429567095215",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "libs/brokerAdmin/feature/user-management/tsconfig.json",
+          "hash": "3824647829043527423"
+        },
+        {
+          "file": "libs/brokerAdmin/feature/user-management/tsconfig.lib.json",
+          "hash": "8746075233993636049"
+        },
+        {
+          "file": "libs/brokerAdmin/feature/user-management/tsconfig.spec.json",
+          "hash": "9840611283105717156"
+        }
+      ],
+      "local-storage": [
+        {
+          "file": "libs/shared/util/local-storage/README.md",
+          "hash": "6564757359448556098"
+        },
+        {
+          "file": "libs/shared/util/local-storage/eslint.config.cjs",
+          "hash": "10608383283379785570",
+          "deps": [
+            "npm:@nx/eslint-plugin"
+          ]
+        },
+        {
+          "file": "libs/shared/util/local-storage/jest.config.ts",
+          "hash": "5380524982580058793"
+        },
+        {
+          "file": "libs/shared/util/local-storage/project.json",
+          "hash": "3865356136963470982"
+        },
+        {
+          "file": "libs/shared/util/local-storage/src/index.ts",
+          "hash": "17224736467724359918"
+        },
+        {
+          "file": "libs/shared/util/local-storage/src/lib/local-storage.service.spec.ts",
+          "hash": "13056733279030013862",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/shared/util/local-storage/src/lib/local-storage.service.ts",
+          "hash": "5089441277570210670",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "libs/shared/util/local-storage/src/test-setup.ts",
+          "hash": "10311052578323244902",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "libs/shared/util/local-storage/tsconfig.json",
+          "hash": "7696797889073457238"
+        },
+        {
+          "file": "libs/shared/util/local-storage/tsconfig.lib.json",
+          "hash": "16735081882122979429"
+        },
+        {
+          "file": "libs/shared/util/local-storage/tsconfig.spec.json",
+          "hash": "6843333014879666704"
+        }
+      ],
+      "insurance-clientBridge-feature-auth": [
+        {
+          "file": "libs/clientBridge/feature/auth/README.md",
+          "hash": "13813340934239156039"
+        },
+        {
+          "file": "libs/clientBridge/feature/auth/eslint.config.cjs",
+          "hash": "10608383283379785570",
+          "deps": [
+            "npm:@nx/eslint-plugin"
+          ]
+        },
+        {
+          "file": "libs/clientBridge/feature/auth/jest.config.ts",
+          "hash": "16122327785033863505"
+        },
+        {
+          "file": "libs/clientBridge/feature/auth/project.json",
+          "hash": "17893640658649720781"
+        },
+        {
+          "file": "libs/clientBridge/feature/auth/src/index.ts",
+          "hash": "5838020927381985296"
+        },
+        {
+          "file": "libs/clientBridge/feature/auth/src/lib/clientBridge-feature-auth.component.html",
+          "hash": "16130385815990735361"
+        },
+        {
+          "file": "libs/clientBridge/feature/auth/src/lib/clientBridge-feature-auth.component.scss",
+          "hash": "12574173441572206437"
+        },
+        {
+          "file": "libs/clientBridge/feature/auth/src/lib/clientBridge-feature-auth.component.spec.ts",
+          "hash": "1677269087262246062",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/clientBridge/feature/auth/src/lib/clientBridge-feature-auth.component.ts",
+          "hash": "11383331259468008130",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/material",
+            "common",
+            "npm:@angular/forms",
+            "input-validation-message",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "libs/clientBridge/feature/auth/src/lib/lib.routes.ts",
+          "hash": "1496381557247285586",
+          "deps": [
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "libs/clientBridge/feature/auth/src/test-setup.ts",
+          "hash": "10311052578323244902",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "libs/clientBridge/feature/auth/tsconfig.json",
+          "hash": "7696797889073457238"
+        },
+        {
+          "file": "libs/clientBridge/feature/auth/tsconfig.lib.json",
+          "hash": "16735081882122979429"
+        },
+        {
+          "file": "libs/clientBridge/feature/auth/tsconfig.spec.json",
+          "hash": "6843333014879666704"
+        }
+      ],
+      "insurance-clientBridge-shell": [
+        {
+          "file": "libs/clientBridge/feature/shell/README.md",
+          "hash": "10012023827226603753"
+        },
+        {
+          "file": "libs/clientBridge/feature/shell/eslint.config.cjs",
+          "hash": "10608383283379785570",
+          "deps": [
+            "npm:@nx/eslint-plugin"
+          ]
+        },
+        {
+          "file": "libs/clientBridge/feature/shell/jest.config.ts",
+          "hash": "15971045792083688961"
+        },
+        {
+          "file": "libs/clientBridge/feature/shell/project.json",
+          "hash": "11000555791501737865"
+        },
+        {
+          "file": "libs/clientBridge/feature/shell/src/index.ts",
+          "hash": "2018532925838420855"
+        },
+        {
+          "file": "libs/clientBridge/feature/shell/src/lib/clientBridge-feature-shell-master.component.html",
+          "hash": "10243371840091270475"
+        },
+        {
+          "file": "libs/clientBridge/feature/shell/src/lib/clientBridge-feature-shell-master.component.scss",
+          "hash": "3305673224296441402"
+        },
+        {
+          "file": "libs/clientBridge/feature/shell/src/lib/clientBridge-feature-shell-master.component.spec.ts",
+          "hash": "17907311928839465676",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/clientBridge/feature/shell/src/lib/clientBridge-feature-shell-master.component.ts",
+          "hash": "6482354328696213948",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/material",
+            "npm:@angular/router",
+            "header-desktop",
+            "common"
+          ]
+        },
+        {
+          "file": "libs/clientBridge/feature/shell/src/lib/lib.routes.ts",
+          "hash": "8229579588771249844",
+          "deps": [
+            "npm:@angular/router",
+            [
+              "products",
+              "dynamic"
+            ]
+          ]
+        },
+        {
+          "file": "libs/clientBridge/feature/shell/src/lib/side-bar.component.html",
+          "hash": "13956849905703984337"
+        },
+        {
+          "file": "libs/clientBridge/feature/shell/src/lib/side-bar.component.scss",
+          "hash": "17199319856363728772"
+        },
+        {
+          "file": "libs/clientBridge/feature/shell/src/lib/side-bar.component.spec.ts",
+          "hash": "12804925810020580092",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/clientBridge/feature/shell/src/lib/side-bar.component.ts",
+          "hash": "14746771577747409871",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/material",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "libs/clientBridge/feature/shell/src/test-setup.ts",
+          "hash": "10311052578323244902",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "libs/clientBridge/feature/shell/tsconfig.json",
+          "hash": "7696797889073457238"
+        },
+        {
+          "file": "libs/clientBridge/feature/shell/tsconfig.lib.json",
+          "hash": "16735081882122979429"
+        },
+        {
+          "file": "libs/clientBridge/feature/shell/tsconfig.spec.json",
+          "hash": "6843333014879666704"
+        }
+      ],
+      "shared-assets": [
+        {
+          "file": "libs/shared/assets/project.json",
+          "hash": "12262018806613140948"
+        },
+        {
+          "file": "libs/shared/assets/src/assets/icons/bell.svg",
+          "hash": "1746818371280501371"
+        },
+        {
+          "file": "libs/shared/assets/src/assets/icons/calendar.svg",
+          "hash": "9620657420280867483"
+        },
+        {
+          "file": "libs/shared/assets/src/assets/icons/chart.svg",
+          "hash": "13700221421993900197"
+        },
+        {
+          "file": "libs/shared/assets/src/assets/icons/eye-slash.svg",
+          "hash": "4030683852573679437"
+        },
+        {
+          "file": "libs/shared/assets/src/assets/icons/eye.svg",
+          "hash": "52504662568542648"
+        },
+        {
+          "file": "libs/shared/assets/src/assets/icons/folder.svg",
+          "hash": "1550220122490415475"
+        },
+        {
+          "file": "libs/shared/assets/src/assets/icons/home.svg",
+          "hash": "12121636670002734196"
+        },
+        {
+          "file": "libs/shared/assets/src/assets/icons/mail.svg",
+          "hash": "16562455931651701023"
+        },
+        {
+          "file": "libs/shared/assets/src/assets/icons/payment.svg",
+          "hash": "15982187470314431816"
+        },
+        {
+          "file": "libs/shared/assets/src/assets/icons/phone.svg",
+          "hash": "317777442499802142"
+        },
+        {
+          "file": "libs/shared/assets/src/assets/icons/profile.svg",
+          "hash": "15524603356264422502"
+        },
+        {
+          "file": "libs/shared/assets/src/assets/icons/search.svg",
+          "hash": "2514477795826151138"
+        },
+        {
+          "file": "libs/shared/assets/src/assets/images/background.svg",
+          "hash": "1079542604554872438"
+        },
+        {
+          "file": "libs/shared/assets/src/assets/images/login-broker-admin.svg",
+          "hash": "10658171095249676421"
+        },
+        {
+          "file": "libs/shared/assets/src/assets/images/loginBackground.svg",
+          "hash": "13727476371837525858"
+        },
+        {
+          "file": "libs/shared/assets/src/assets/images/person.svg",
+          "hash": "2360849524833614125"
+        },
+        {
+          "file": "libs/shared/assets/src/fonts/poppins/Poppins-Black.woff",
+          "hash": "17091740867669487045"
+        },
+        {
+          "file": "libs/shared/assets/src/fonts/poppins/Poppins-BlackItalic.woff",
+          "hash": "5367591239238567000"
+        },
+        {
+          "file": "libs/shared/assets/src/fonts/poppins/Poppins-Bold.woff",
+          "hash": "7844018150219616354"
+        },
+        {
+          "file": "libs/shared/assets/src/fonts/poppins/Poppins-BoldItalic.woff",
+          "hash": "7095877974799517061"
+        },
+        {
+          "file": "libs/shared/assets/src/fonts/poppins/Poppins-ExtraBold.woff",
+          "hash": "5690181298005345589"
+        },
+        {
+          "file": "libs/shared/assets/src/fonts/poppins/Poppins-ExtraBoldItalic.woff",
+          "hash": "15580525824565772863"
+        },
+        {
+          "file": "libs/shared/assets/src/fonts/poppins/Poppins-ExtraLight.woff",
+          "hash": "15886304280396143201"
+        },
+        {
+          "file": "libs/shared/assets/src/fonts/poppins/Poppins-ExtraLightItalic.woff",
+          "hash": "5202572041742182086"
+        },
+        {
+          "file": "libs/shared/assets/src/fonts/poppins/Poppins-Italic.woff",
+          "hash": "4739182767417262563"
+        },
+        {
+          "file": "libs/shared/assets/src/fonts/poppins/Poppins-Light.woff",
+          "hash": "3849182588072419616"
+        },
+        {
+          "file": "libs/shared/assets/src/fonts/poppins/Poppins-LightItalic.woff",
+          "hash": "6758792206644284376"
+        },
+        {
+          "file": "libs/shared/assets/src/fonts/poppins/Poppins-Medium.woff",
+          "hash": "8148578078286705573"
+        },
+        {
+          "file": "libs/shared/assets/src/fonts/poppins/Poppins-MediumItalic.woff",
+          "hash": "15056797832184799083"
+        },
+        {
+          "file": "libs/shared/assets/src/fonts/poppins/Poppins-Regular.woff",
+          "hash": "11512337879102659"
+        },
+        {
+          "file": "libs/shared/assets/src/fonts/poppins/Poppins-SemiBold.woff",
+          "hash": "7019608782439092286"
+        },
+        {
+          "file": "libs/shared/assets/src/fonts/poppins/Poppins-SemiBoldItalic.woff",
+          "hash": "5522507773097403615"
+        },
+        {
+          "file": "libs/shared/assets/src/fonts/poppins/Poppins-Thin.woff",
+          "hash": "8644241650103106468"
+        },
+        {
+          "file": "libs/shared/assets/src/fonts/poppins/Poppins-ThinItalic.woff",
+          "hash": "3152929367474119828"
+        }
+      ],
+      "icon": [
+        {
+          "file": "libs/clientBridge/shared/ui/icon/README.md",
+          "hash": "16572133646677414010"
+        },
+        {
+          "file": "libs/clientBridge/shared/ui/icon/eslint.config.cjs",
+          "hash": "13383875484302940154",
+          "deps": [
+            "npm:@nx/eslint-plugin"
+          ]
+        },
+        {
+          "file": "libs/clientBridge/shared/ui/icon/jest.config.ts",
+          "hash": "12154702351161353186"
+        },
+        {
+          "file": "libs/clientBridge/shared/ui/icon/project.json",
+          "hash": "1559581080251600588"
+        },
+        {
+          "file": "libs/clientBridge/shared/ui/icon/src/index.ts",
+          "hash": "16059966285652613735"
+        },
+        {
+          "file": "libs/clientBridge/shared/ui/icon/src/lib/clientBridge-shared-ui-icon-register.ts",
+          "hash": "17481267274659658881",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/material",
+            "npm:@angular/platform-browser"
+          ]
+        },
+        {
+          "file": "libs/clientBridge/shared/ui/icon/src/lib/constants.ts",
+          "hash": "9749071708279438403"
+        },
+        {
+          "file": "libs/clientBridge/shared/ui/icon/src/lib/models.ts",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "libs/clientBridge/shared/ui/icon/src/test-setup.ts",
+          "hash": "10311052578323244902",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "libs/clientBridge/shared/ui/icon/tsconfig.json",
+          "hash": "13998244593230697596"
+        },
+        {
+          "file": "libs/clientBridge/shared/ui/icon/tsconfig.lib.json",
+          "hash": "6331328170945087642"
+        },
+        {
+          "file": "libs/clientBridge/shared/ui/icon/tsconfig.spec.json",
+          "hash": "17931553083129270282"
+        }
+      ],
+      "app-core": [
+        {
+          "file": "libs/shared/util/app-core/README.md",
+          "hash": "7191089842811815447"
+        },
+        {
+          "file": "libs/shared/util/app-core/eslint.config.cjs",
+          "hash": "10608383283379785570",
+          "deps": [
+            "npm:@nx/eslint-plugin"
+          ]
+        },
+        {
+          "file": "libs/shared/util/app-core/jest.config.ts",
+          "hash": "8926395285195869090"
+        },
+        {
+          "file": "libs/shared/util/app-core/project.json",
+          "hash": "11047899494141604581"
+        },
+        {
+          "file": "libs/shared/util/app-core/src/index.ts",
+          "hash": "11253336961403791907"
+        },
+        {
+          "file": "libs/shared/util/app-core/src/lib/shared-util-app-core-provide.ts",
+          "hash": "11651598071864486670",
+          "deps": [
+            "web-sdk",
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/shared/util/app-core/src/test-setup.ts",
+          "hash": "10311052578323244902",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "libs/shared/util/app-core/tsconfig.json",
+          "hash": "7696797889073457238"
+        },
+        {
+          "file": "libs/shared/util/app-core/tsconfig.lib.json",
+          "hash": "16735081882122979429"
+        },
+        {
+          "file": "libs/shared/util/app-core/tsconfig.spec.json",
+          "hash": "6843333014879666704"
+        }
+      ],
+      "brokerAdmin-e2e": [
+        {
+          "file": "apps/brokerAdmin-e2e/cypress.config.ts",
+          "hash": "621303877795587064",
+          "deps": [
+            "npm:@nx/cypress",
+            "npm:cypress"
+          ]
+        },
+        {
+          "file": "apps/brokerAdmin-e2e/eslint.config.cjs",
+          "hash": "13400917461993138847",
+          "deps": [
+            "npm:eslint-plugin-cypress"
+          ]
+        },
+        {
+          "file": "apps/brokerAdmin-e2e/project.json",
+          "hash": "8545460744465798904"
+        },
+        {
+          "file": "apps/brokerAdmin-e2e/src/e2e/app.cy.ts",
+          "hash": "18441514866368316967"
+        },
+        {
+          "file": "apps/brokerAdmin-e2e/src/fixtures/example.json",
+          "hash": "13882982864087580737"
+        },
+        {
+          "file": "apps/brokerAdmin-e2e/src/support/app.po.ts",
+          "hash": "5364106453863571025"
+        },
+        {
+          "file": "apps/brokerAdmin-e2e/src/support/commands.ts",
+          "hash": "6034007119807233486"
+        },
+        {
+          "file": "apps/brokerAdmin-e2e/src/support/e2e.ts",
+          "hash": "14369563060992369541"
+        },
+        {
+          "file": "apps/brokerAdmin-e2e/tsconfig.json",
+          "hash": "8511929940695645841"
+        }
+      ],
+      "clientBridge": [
+        {
+          "file": "apps/clientBridge/eslint.config.cjs",
+          "hash": "15023402052669004293",
+          "deps": [
+            "npm:@nx/eslint-plugin"
+          ]
+        },
+        {
+          "file": "apps/clientBridge/jest.config.ts",
+          "hash": "7502977340752733096"
+        },
+        {
+          "file": "apps/clientBridge/project.json",
+          "hash": "3568984272552255128"
+        },
+        {
+          "file": "apps/clientBridge/public/favicon.ico",
+          "hash": "9303420814833116677"
+        },
+        {
+          "file": "apps/clientBridge/src/app/app.component.html",
+          "hash": "11958735616642380711"
+        },
+        {
+          "file": "apps/clientBridge/src/app/app.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/clientBridge/src/app/app.component.spec.ts",
+          "hash": "15625459257426735655",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "apps/clientBridge/src/app/app.component.ts",
+          "hash": "5793867254139212731",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "apps/clientBridge/src/app/app.config.ts",
+          "hash": "8032770939666040846",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "alert",
+            "web-sdk",
+            "setting",
+            "npm:@ngrx/router-store",
+            "npm:@ngrx/store",
+            "npm:@ngrx/effects",
+            "npm:@ngrx/store-devtools",
+            "app-core",
+            "npm:@angular/platform-browser",
+            "locales",
+            "icon",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "apps/clientBridge/src/app/app.routes.ts",
+          "hash": "9312291523160601152",
+          "deps": [
+            "npm:@angular/router",
+            [
+              "insurance-clientBridge-feature-auth",
+              "dynamic"
+            ],
+            [
+              "insurance-clientBridge-shell",
+              "dynamic"
+            ]
+          ]
+        },
+        {
+          "file": "apps/clientBridge/src/app/guards/auth.guard.spec.ts",
+          "hash": "8826885499913990525",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "apps/clientBridge/src/app/guards/auth.guard.ts",
+          "hash": "11726489368362468046",
+          "deps": [
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "apps/clientBridge/src/environments/environment.ts",
+          "hash": "13693270574126294094",
+          "deps": [
+            "web-sdk"
+          ]
+        },
+        {
+          "file": "apps/clientBridge/src/index.html",
+          "hash": "14060387277210784540"
+        },
+        {
+          "file": "apps/clientBridge/src/main.ts",
+          "hash": "9581976732480811476",
+          "deps": [
+            "npm:@angular/platform-browser"
+          ]
+        },
+        {
+          "file": "apps/clientBridge/src/styles.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/clientBridge/src/test-setup.ts",
+          "hash": "10311052578323244902",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "apps/clientBridge/tailwind.config.js",
+          "hash": "13441739061853998787",
+          "deps": [
+            "npm:@nx/angular",
+            "tailwind-preset",
+            "npm:tailwindcss"
+          ]
+        },
+        {
+          "file": "apps/clientBridge/tsconfig.app.json",
+          "hash": "15840844869456775012"
+        },
+        {
+          "file": "apps/clientBridge/tsconfig.editor.json",
+          "hash": "17575078801745175164"
+        },
+        {
+          "file": "apps/clientBridge/tsconfig.json",
+          "hash": "5798422190385800407"
+        },
+        {
+          "file": "apps/clientBridge/tsconfig.spec.json",
+          "hash": "1930986853382524452"
+        }
+      ],
+      "web-sdk": [
+        {
+          "file": "libs/shared/util/web-sdk/README.md",
+          "hash": "14401657411021313503"
+        },
+        {
+          "file": "libs/shared/util/web-sdk/eslint.config.cjs",
+          "hash": "10608383283379785570",
+          "deps": [
+            "npm:@nx/eslint-plugin"
+          ]
+        },
+        {
+          "file": "libs/shared/util/web-sdk/jest.config.ts",
+          "hash": "1919805236764941770"
+        },
+        {
+          "file": "libs/shared/util/web-sdk/project.json",
+          "hash": "188035120960827865"
+        },
+        {
+          "file": "libs/shared/util/web-sdk/src/index.ts",
+          "hash": "4729062189763970410"
+        },
+        {
+          "file": "libs/shared/util/web-sdk/src/lib/injection-token.ts",
+          "hash": "6243456775905589903",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/shared/util/web-sdk/src/lib/material-angular-default-options-overrides.ts",
+          "hash": "15243097919215864577",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/material"
+          ]
+        },
+        {
+          "file": "libs/shared/util/web-sdk/src/lib/models.ts",
+          "hash": "4267708494945851913"
+        },
+        {
+          "file": "libs/shared/util/web-sdk/src/test-setup.ts",
+          "hash": "10311052578323244902",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "libs/shared/util/web-sdk/tsconfig.json",
+          "hash": "7696797889073457238"
+        },
+        {
+          "file": "libs/shared/util/web-sdk/tsconfig.lib.json",
+          "hash": "16735081882122979429"
+        },
+        {
+          "file": "libs/shared/util/web-sdk/tsconfig.spec.json",
+          "hash": "6843333014879666704"
+        }
+      ],
+      "brokerAdmin": [
+        {
+          "file": "apps/brokerAdmin/eslint.config.cjs",
+          "hash": "15023402052669004293",
+          "deps": [
+            "npm:@nx/eslint-plugin"
+          ]
+        },
+        {
+          "file": "apps/brokerAdmin/jest.config.ts",
+          "hash": "14567824641259090784"
+        },
+        {
+          "file": "apps/brokerAdmin/project.json",
+          "hash": "14434037491846408283"
+        },
+        {
+          "file": "apps/brokerAdmin/public/favicon.ico",
+          "hash": "9303420814833116677"
+        },
+        {
+          "file": "apps/brokerAdmin/src/app/app.component.html",
+          "hash": "11958735616642380711"
+        },
+        {
+          "file": "apps/brokerAdmin/src/app/app.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/brokerAdmin/src/app/app.component.spec.ts",
+          "hash": "1752035564536681487",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "apps/brokerAdmin/src/app/app.component.ts",
+          "hash": "1760305811076143355",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "apps/brokerAdmin/src/app/app.config.ts",
+          "hash": "6374289815213502189",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "alert",
+            "web-sdk",
+            "setting",
+            "npm:@ngrx/router-store",
+            "npm:@ngrx/store",
+            "npm:@ngrx/effects",
+            "npm:@ngrx/store-devtools",
+            "app-core",
+            "npm:@angular/platform-browser",
+            "locales",
+            "icon",
+            "npm:@angular/common",
+            "clientBridge"
+          ]
+        },
+        {
+          "file": "apps/brokerAdmin/src/app/app.routes.ts",
+          "hash": "8654613247413347542",
+          "deps": [
+            "npm:@angular/router",
+            "clientBridge",
+            [
+              "auth",
+              "dynamic"
+            ],
+            [
+              "shell",
+              "dynamic"
+            ]
+          ]
+        },
+        {
+          "file": "apps/brokerAdmin/src/index.html",
+          "hash": "13142450112443695578"
+        },
+        {
+          "file": "apps/brokerAdmin/src/main.ts",
+          "hash": "9581976732480811476",
+          "deps": [
+            "npm:@angular/platform-browser"
+          ]
+        },
+        {
+          "file": "apps/brokerAdmin/src/styles.scss",
+          "hash": "10582656168007810803"
+        },
+        {
+          "file": "apps/brokerAdmin/src/test-setup.ts",
+          "hash": "10311052578323244902",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "apps/brokerAdmin/tailwind.config.js",
+          "hash": "13220782749205193097",
+          "deps": [
+            "npm:@nx/angular",
+            "tailwind-preset",
+            "npm:tailwindcss"
+          ]
+        },
+        {
+          "file": "apps/brokerAdmin/tsconfig.app.json",
+          "hash": "15840844869456775012"
+        },
+        {
+          "file": "apps/brokerAdmin/tsconfig.editor.json",
+          "hash": "17575078801745175164"
+        },
+        {
+          "file": "apps/brokerAdmin/tsconfig.json",
+          "hash": "5798422190385800407"
+        },
+        {
+          "file": "apps/brokerAdmin/tsconfig.spec.json",
+          "hash": "1930986853382524452"
+        }
+      ],
+      "alert": [
+        {
+          "file": "libs/shared/ui/alert/README.md",
+          "hash": "2673630574268683011"
+        },
+        {
+          "file": "libs/shared/ui/alert/eslint.config.cjs",
+          "hash": "4100714948303940036",
+          "deps": [
+            "npm:@nx/eslint-plugin"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/alert/jest.config.ts",
+          "hash": "6384299180791672809"
+        },
+        {
+          "file": "libs/shared/ui/alert/project.json",
+          "hash": "17886962126025503565"
+        },
+        {
+          "file": "libs/shared/ui/alert/src/index.ts",
+          "hash": "11829984636934013889"
+        },
+        {
+          "file": "libs/shared/ui/alert/src/lib/alert.service.spec.ts",
+          "hash": "17741965297419449155",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/alert/src/lib/alert.service.ts",
+          "hash": "8420859750697368044",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/material"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/alert/src/lib/shared-ui-alert-provide.ts",
+          "hash": "8623283431113343105",
+          "deps": [
+            "npm:@angular/material",
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/alert/src/test-setup.ts",
+          "hash": "10311052578323244902",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/alert/tsconfig.json",
+          "hash": "7696797889073457238"
+        },
+        {
+          "file": "libs/shared/ui/alert/tsconfig.lib.json",
+          "hash": "16735081882122979429"
+        },
+        {
+          "file": "libs/shared/ui/alert/tsconfig.spec.json",
+          "hash": "6843333014879666704"
+        }
+      ],
+      "products": [
+        {
+          "file": "libs/clientBridge/feature/products/README.md",
+          "hash": "13990950058939174388"
+        },
+        {
+          "file": "libs/clientBridge/feature/products/eslint.config.cjs",
+          "hash": "10608383283379785570",
+          "deps": [
+            "npm:@nx/eslint-plugin"
+          ]
+        },
+        {
+          "file": "libs/clientBridge/feature/products/jest.config.ts",
+          "hash": "15160610611848547768"
+        },
+        {
+          "file": "libs/clientBridge/feature/products/project.json",
+          "hash": "3021054874555213116"
+        },
+        {
+          "file": "libs/clientBridge/feature/products/src/index.ts",
+          "hash": "5923078063212319347"
+        },
+        {
+          "file": "libs/clientBridge/feature/products/src/lib/clientBridge-feature-products.component.html",
+          "hash": "14898089700696257710"
+        },
+        {
+          "file": "libs/clientBridge/feature/products/src/lib/clientBridge-feature-products.component.scss",
+          "hash": "1209631378036195902"
+        },
+        {
+          "file": "libs/clientBridge/feature/products/src/lib/clientBridge-feature-products.component.spec.ts",
+          "hash": "8077417967810941137",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/clientBridge/feature/products/src/lib/clientBridge-feature-products.component.ts",
+          "hash": "16896775377535762103",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/material",
+            "npm:@angular/forms",
+            "input-validation-message"
+          ]
+        },
+        {
+          "file": "libs/clientBridge/feature/products/src/lib/lib.routes.ts",
+          "hash": "8301108373772949346",
+          "deps": [
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "libs/clientBridge/feature/products/src/test-setup.ts",
+          "hash": "10311052578323244902",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "libs/clientBridge/feature/products/tsconfig.json",
+          "hash": "7696797889073457238"
+        },
+        {
+          "file": "libs/clientBridge/feature/products/tsconfig.lib.json",
+          "hash": "16735081882122979429"
+        },
+        {
+          "file": "libs/clientBridge/feature/products/tsconfig.spec.json",
+          "hash": "6843333014879666704"
+        }
+      ],
+      "shell": [
+        {
+          "file": "libs/brokerAdmin/feature/shell/README.md",
+          "hash": "10012023827226603753"
+        },
+        {
+          "file": "libs/brokerAdmin/feature/shell/eslint.config.cjs",
+          "hash": "10608383283379785570",
+          "deps": [
+            "npm:@nx/eslint-plugin"
+          ]
+        },
+        {
+          "file": "libs/brokerAdmin/feature/shell/jest.config.ts",
+          "hash": "12271371588331759660"
+        },
+        {
+          "file": "libs/brokerAdmin/feature/shell/project.json",
+          "hash": "17654259372111652724"
+        },
+        {
+          "file": "libs/brokerAdmin/feature/shell/src/index.ts",
+          "hash": "2654659470783014356"
+        },
+        {
+          "file": "libs/brokerAdmin/feature/shell/src/lib/brokerAdmin-feature-shell.component.html",
+          "hash": "13924437807446913052"
+        },
+        {
+          "file": "libs/brokerAdmin/feature/shell/src/lib/brokerAdmin-feature-shell.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "libs/brokerAdmin/feature/shell/src/lib/brokerAdmin-feature-shell.component.spec.ts",
+          "hash": "12031246146225710639",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/brokerAdmin/feature/shell/src/lib/brokerAdmin-feature-shell.component.ts",
+          "hash": "318806146466145861",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/forms",
+            "header-desktop",
+            "npm:@angular/material",
+            "npm:@angular/router",
+            "common"
+          ]
+        },
+        {
+          "file": "libs/brokerAdmin/feature/shell/src/lib/lib.routes.ts",
+          "hash": "15831551260302349335",
+          "deps": [
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "libs/brokerAdmin/feature/shell/src/lib/side-bar.component.html",
+          "hash": "8483547005587586938"
+        },
+        {
+          "file": "libs/brokerAdmin/feature/shell/src/lib/side-bar.component.scss",
+          "hash": "17199319856363728772"
+        },
+        {
+          "file": "libs/brokerAdmin/feature/shell/src/lib/side-bar.component.spec.ts",
+          "hash": "11101806198762026396",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/brokerAdmin/feature/shell/src/lib/side-bar.component.ts",
+          "hash": "667482669876125002",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/material"
+          ]
+        },
+        {
+          "file": "libs/brokerAdmin/feature/shell/src/test-setup.ts",
+          "hash": "10311052578323244902",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "libs/brokerAdmin/feature/shell/tsconfig.json",
+          "hash": "7696797889073457238"
+        },
+        {
+          "file": "libs/brokerAdmin/feature/shell/tsconfig.lib.json",
+          "hash": "16735081882122979429"
+        },
+        {
+          "file": "libs/brokerAdmin/feature/shell/tsconfig.spec.json",
+          "hash": "6843333014879666704"
+        }
+      ],
+      "setting": [
+        {
+          "file": "libs/shared/data/setting/README.md",
+          "hash": "2865438227101458"
+        },
+        {
+          "file": "libs/shared/data/setting/eslint.config.cjs",
+          "hash": "10608383283379785570",
+          "deps": [
+            "npm:@nx/eslint-plugin"
+          ]
+        },
+        {
+          "file": "libs/shared/data/setting/jest.config.ts",
+          "hash": "3188549766810380434"
+        },
+        {
+          "file": "libs/shared/data/setting/project.json",
+          "hash": "2750160447394705481"
+        },
+        {
+          "file": "libs/shared/data/setting/src/index.ts",
+          "hash": "12966743620039424420"
+        },
+        {
+          "file": "libs/shared/data/setting/src/lib/+state/setting.actions.ts",
+          "hash": "15380024372627255836",
+          "deps": [
+            "npm:@ngrx/store"
+          ]
+        },
+        {
+          "file": "libs/shared/data/setting/src/lib/+state/setting.constants.ts",
+          "hash": "336290438955106968"
+        },
+        {
+          "file": "libs/shared/data/setting/src/lib/+state/setting.effects.spec.ts",
+          "hash": "2354322751258259242",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@ngrx/effects",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/shared/data/setting/src/lib/+state/setting.effects.ts",
+          "hash": "11456083696749831153",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@ngrx/effects",
+            "local-storage",
+            "npm:rxjs",
+            "npm:@nx/angular"
+          ]
+        },
+        {
+          "file": "libs/shared/data/setting/src/lib/+state/setting.facade.ts",
+          "hash": "11299398175406498380",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@ngrx/store"
+          ]
+        },
+        {
+          "file": "libs/shared/data/setting/src/lib/+state/setting.model.ts",
+          "hash": "2297553456443037078"
+        },
+        {
+          "file": "libs/shared/data/setting/src/lib/+state/setting.reducer.ts",
+          "hash": "2468834763591915194",
+          "deps": [
+            "npm:@ngrx/store"
+          ]
+        },
+        {
+          "file": "libs/shared/data/setting/src/lib/+state/setting.selectors.ts",
+          "hash": "2988755974303001181",
+          "deps": [
+            "npm:@ngrx/store"
+          ]
+        },
+        {
+          "file": "libs/shared/data/setting/src/lib/+state/setting.utils.ts",
+          "hash": "1771321707515420709",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "web-sdk",
+            "local-storage",
+            "npm:@angular/platform-browser"
+          ]
+        },
+        {
+          "file": "libs/shared/data/setting/src/lib/shared-data-setting-provide.ts",
+          "hash": "6258947919495334691",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@ngrx/store",
+            "npm:@ngrx/effects"
+          ]
+        },
+        {
+          "file": "libs/shared/data/setting/src/test-setup.ts",
+          "hash": "10311052578323244902",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "libs/shared/data/setting/tsconfig.json",
+          "hash": "7696797889073457238"
+        },
+        {
+          "file": "libs/shared/data/setting/tsconfig.lib.json",
+          "hash": "16735081882122979429"
+        },
+        {
+          "file": "libs/shared/data/setting/tsconfig.spec.json",
+          "hash": "6843333014879666704"
+        }
+      ],
+      "input-validation-message": [
+        {
+          "file": "libs/shared/ui/input-validation-message/README.md",
+          "hash": "11662561789840623944"
+        },
+        {
+          "file": "libs/shared/ui/input-validation-message/eslint.config.cjs",
+          "hash": "10608383283379785570",
+          "deps": [
+            "npm:@nx/eslint-plugin"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/input-validation-message/jest.config.ts",
+          "hash": "15910831812530269007"
+        },
+        {
+          "file": "libs/shared/ui/input-validation-message/project.json",
+          "hash": "5313170036707545607"
+        },
+        {
+          "file": "libs/shared/ui/input-validation-message/src/index.ts",
+          "hash": "9746306842141868749"
+        },
+        {
+          "file": "libs/shared/ui/input-validation-message/src/lib/error-message.component.html",
+          "hash": "7553108418202237349"
+        },
+        {
+          "file": "libs/shared/ui/input-validation-message/src/lib/error-message.component.spec.ts",
+          "hash": "3652063849229134704",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/input-validation-message/src/lib/error-message.component.ts",
+          "hash": "12256693990998088651",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/forms"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/input-validation-message/src/lib/validators.ts",
+          "hash": "4775238661214943162",
+          "deps": [
+            "npm:@angular/forms"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/input-validation-message/src/test-setup.ts",
+          "hash": "10311052578323244902",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/input-validation-message/tsconfig.json",
+          "hash": "7696797889073457238"
+        },
+        {
+          "file": "libs/shared/ui/input-validation-message/tsconfig.lib.json",
+          "hash": "16735081882122979429"
+        },
+        {
+          "file": "libs/shared/ui/input-validation-message/tsconfig.spec.json",
+          "hash": "6843333014879666704"
+        }
+      ],
+      "header-desktop": [
+        {
+          "file": "libs/shared/ui/header-desktop/README.md",
+          "hash": "12899716972165141687"
+        },
+        {
+          "file": "libs/shared/ui/header-desktop/eslint.config.cjs",
+          "hash": "4100714948303940036",
+          "deps": [
+            "npm:@nx/eslint-plugin"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/header-desktop/jest.config.ts",
+          "hash": "6232307101752108112"
+        },
+        {
+          "file": "libs/shared/ui/header-desktop/project.json",
+          "hash": "6746639049544391877"
+        },
+        {
+          "file": "libs/shared/ui/header-desktop/src/index.ts",
+          "hash": "3504095591523761409"
+        },
+        {
+          "file": "libs/shared/ui/header-desktop/src/lib/header-desktop.component.html",
+          "hash": "5372130169900818259"
+        },
+        {
+          "file": "libs/shared/ui/header-desktop/src/lib/header-desktop.component.scss",
+          "hash": "11860604034468559561"
+        },
+        {
+          "file": "libs/shared/ui/header-desktop/src/lib/header-desktop.component.spec.ts",
+          "hash": "10001445504465417489",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/header-desktop/src/lib/header-desktop.component.ts",
+          "hash": "3254580058702841463",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/material"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/header-desktop/src/test-setup.ts",
+          "hash": "10311052578323244902",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/header-desktop/tsconfig.json",
+          "hash": "7696797889073457238"
+        },
+        {
+          "file": "libs/shared/ui/header-desktop/tsconfig.lib.json",
+          "hash": "16735081882122979429"
+        },
+        {
+          "file": "libs/shared/ui/header-desktop/tsconfig.spec.json",
+          "hash": "6843333014879666704"
+        }
+      ],
+      "auth": [
+        {
+          "file": "libs/brokerAdmin/feature/auth/README.md",
+          "hash": "13813340934239156039"
+        },
+        {
+          "file": "libs/brokerAdmin/feature/auth/eslint.config.cjs",
+          "hash": "10608383283379785570",
+          "deps": [
+            "npm:@nx/eslint-plugin"
+          ]
+        },
+        {
+          "file": "libs/brokerAdmin/feature/auth/jest.config.ts",
+          "hash": "11314388444078764190"
+        },
+        {
+          "file": "libs/brokerAdmin/feature/auth/project.json",
+          "hash": "8584379127716945984"
+        },
+        {
+          "file": "libs/brokerAdmin/feature/auth/src/index.ts",
+          "hash": "8650208290453548078"
+        },
+        {
+          "file": "libs/brokerAdmin/feature/auth/src/lib/brokerAdmin-feature-auth.component.html",
+          "hash": "16889794800904744729"
+        },
+        {
+          "file": "libs/brokerAdmin/feature/auth/src/lib/brokerAdmin-feature-auth.component.scss",
+          "hash": "15312466476263840534"
+        },
+        {
+          "file": "libs/brokerAdmin/feature/auth/src/lib/brokerAdmin-feature-auth.component.spec.ts",
+          "hash": "2191968355685180866",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/brokerAdmin/feature/auth/src/lib/brokerAdmin-feature-auth.component.ts",
+          "hash": "13508162690361839494",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/forms",
+            "npm:@angular/router",
+            "common",
+            "npm:@angular/material",
+            "input-validation-message"
+          ]
+        },
+        {
+          "file": "libs/brokerAdmin/feature/auth/src/lib/lib.routes.ts",
+          "hash": "157998526504029762",
+          "deps": [
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "libs/brokerAdmin/feature/auth/src/test-setup.ts",
+          "hash": "10311052578323244902",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "libs/brokerAdmin/feature/auth/tsconfig.json",
+          "hash": "7696797889073457238"
+        },
+        {
+          "file": "libs/brokerAdmin/feature/auth/tsconfig.lib.json",
+          "hash": "16735081882122979429"
+        },
+        {
+          "file": "libs/brokerAdmin/feature/auth/tsconfig.spec.json",
+          "hash": "6843333014879666704"
+        }
+      ],
+      "clientBridge-e2e": [
+        {
+          "file": "apps/clientBridge-e2e/cypress.config.ts",
+          "hash": "7515766542832500909",
+          "deps": [
+            "npm:@nx/cypress",
+            "npm:cypress"
+          ]
+        },
+        {
+          "file": "apps/clientBridge-e2e/eslint.config.cjs",
+          "hash": "13400917461993138847",
+          "deps": [
+            "npm:eslint-plugin-cypress"
+          ]
+        },
+        {
+          "file": "apps/clientBridge-e2e/project.json",
+          "hash": "6178071810660727005"
+        },
+        {
+          "file": "apps/clientBridge-e2e/src/e2e/app.cy.ts",
+          "hash": "14439049734587693890"
+        },
+        {
+          "file": "apps/clientBridge-e2e/src/fixtures/example.json",
+          "hash": "13882982864087580737"
+        },
+        {
+          "file": "apps/clientBridge-e2e/src/support/app.po.ts",
+          "hash": "5364106453863571025"
+        },
+        {
+          "file": "apps/clientBridge-e2e/src/support/commands.ts",
+          "hash": "6034007119807233486"
+        },
+        {
+          "file": "apps/clientBridge-e2e/src/support/e2e.ts",
+          "hash": "14369563060992369541"
+        },
+        {
+          "file": "apps/clientBridge-e2e/tsconfig.json",
+          "hash": "8511929940695645841"
+        }
+      ],
+      "tailwind-preset": [
+        {
+          "file": "libs/shared/util/tailwind-preset/project.json",
+          "hash": "5182377649565336972"
+        },
+        {
+          "file": "libs/shared/util/tailwind-preset/src/lib/index.js",
+          "hash": "12602345847329677470",
+          "deps": [
+            "npm:tailwindcss"
+          ]
+        }
+      ],
+      "common": [
+        {
+          "file": "libs/shared/util/common/README.md",
+          "hash": "5067725685752823321"
+        },
+        {
+          "file": "libs/shared/util/common/eslint.config.cjs",
+          "hash": "10608383283379785570",
+          "deps": [
+            "npm:@nx/eslint-plugin"
+          ]
+        },
+        {
+          "file": "libs/shared/util/common/jest.config.ts",
+          "hash": "242401510674253715"
+        },
+        {
+          "file": "libs/shared/util/common/project.json",
+          "hash": "4395402788992403021"
+        },
+        {
+          "file": "libs/shared/util/common/src/index.ts",
+          "hash": "16451201888332847279"
+        },
+        {
+          "file": "libs/shared/util/common/src/lib/index.ts",
+          "hash": "13607197439653986720",
+          "deps": [
+            "npm:@angular/core",
+            "npm:rxjs",
+            "npm:@angular/cdk"
+          ]
+        },
+        {
+          "file": "libs/shared/util/common/src/test-setup.ts",
+          "hash": "10311052578323244902",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "libs/shared/util/common/tsconfig.json",
+          "hash": "7696797889073457238"
+        },
+        {
+          "file": "libs/shared/util/common/tsconfig.lib.json",
+          "hash": "16735081882122979429"
+        },
+        {
+          "file": "libs/shared/util/common/tsconfig.spec.json",
+          "hash": "6843333014879666704"
+        }
+      ],
+      "locales": [
+        {
+          "file": "libs/shared/util/locales/README.md",
+          "hash": "13902120308787860734"
+        },
+        {
+          "file": "libs/shared/util/locales/eslint.config.cjs",
+          "hash": "10608383283379785570",
+          "deps": [
+            "npm:@nx/eslint-plugin"
+          ]
+        },
+        {
+          "file": "libs/shared/util/locales/jest.config.ts",
+          "hash": "5189590627854777518"
+        },
+        {
+          "file": "libs/shared/util/locales/project.json",
+          "hash": "18064215036134063707"
+        },
+        {
+          "file": "libs/shared/util/locales/src/index.ts",
+          "hash": "14035552159848393783",
+          "deps": [
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "libs/shared/util/locales/src/lib/ar.ts",
+          "hash": "5046327216055681145",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/shared/util/locales/src/lib/en.ts",
+          "hash": "15359466971605373615",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/shared/util/locales/src/test-setup.ts",
+          "hash": "10311052578323244902",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "libs/shared/util/locales/tsconfig.json",
+          "hash": "7696797889073457238"
+        },
+        {
+          "file": "libs/shared/util/locales/tsconfig.lib.json",
+          "hash": "16735081882122979429"
+        },
+        {
+          "file": "libs/shared/util/locales/tsconfig.spec.json",
+          "hash": "6843333014879666704"
+        }
+      ],
+      "spinner": [
+        {
+          "file": "libs/shared/ui/spinner/README.md",
+          "hash": "8414598331321980078"
+        },
+        {
+          "file": "libs/shared/ui/spinner/eslint.config.cjs",
+          "hash": "4100714948303940036",
+          "deps": [
+            "npm:@nx/eslint-plugin"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/spinner/jest.config.ts",
+          "hash": "11368992663051454915"
+        },
+        {
+          "file": "libs/shared/ui/spinner/project.json",
+          "hash": "45598072328981502"
+        },
+        {
+          "file": "libs/shared/ui/spinner/src/index.ts",
+          "hash": "17202682959053321472"
+        },
+        {
+          "file": "libs/shared/ui/spinner/src/lib/overlay-spinner.directive.spec.ts",
+          "hash": "11459328383204648459"
+        },
+        {
+          "file": "libs/shared/ui/spinner/src/lib/overlay-spinner.directive.ts",
+          "hash": "10051918162177126393",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/spinner/src/test-setup.ts",
+          "hash": "10311052578323244902",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/spinner/tsconfig.json",
+          "hash": "7696797889073457238"
+        },
+        {
+          "file": "libs/shared/ui/spinner/tsconfig.lib.json",
+          "hash": "16735081882122979429"
+        },
+        {
+          "file": "libs/shared/ui/spinner/tsconfig.spec.json",
+          "hash": "6843333014879666704"
+        }
+      ]
+    }
+  }
+}

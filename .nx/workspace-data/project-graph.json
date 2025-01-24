@@ -1,57 +1,5 @@
 {
   "nodes": {
-    "insurance-feature-user-management": {
-      "name": "insurance-feature-user-management",
-      "type": "lib",
-      "data": {
-        "root": "libs/brokerAdmin/feature/user-management",
-        "targets": {
-          "lint": {
-            "executor": "@nx/eslint:lint",
-            "options": {},
-            "configurations": {},
-            "parallelism": true,
-            "cache": true,
-            "inputs": [
-              "default",
-              "{workspaceRoot}/.eslintrc.json",
-              "{workspaceRoot}/.eslintignore",
-              "{workspaceRoot}/eslint.config.cjs"
-            ]
-          },
-          "test": {
-            "executor": "@nx/jest:jest",
-            "outputs": [
-              "{workspaceRoot}/coverage/{projectRoot}"
-            ],
-            "options": {
-              "jestConfig": "libs/brokerAdmin/feature/insurance-feature-user-management/jest.config.ts",
-              "passWithNoTests": true
-            },
-            "configurations": {
-              "ci": {
-                "ci": true,
-                "codeCoverage": true
-              }
-            },
-            "parallelism": true,
-            "cache": true,
-            "inputs": [
-              "default",
-              "^production",
-              "{workspaceRoot}/jest.preset.js"
-            ]
-          }
-        },
-        "name": "insurance-feature-user-management",
-        "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
-        "sourceRoot": "libs/brokerAdmin/feature/insurance-feature-user-management/src",
-        "prefix": "insurance",
-        "projectType": "library",
-        "tags": [],
-        "implicitDependencies": []
-      }
-    },
     "input-validation-message": {
       "name": "input-validation-message",
       "type": "lib",
@@ -411,110 +359,6 @@
         "name": "local-storage",
         "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
         "sourceRoot": "libs/shared/util/local-storage/src",
-        "prefix": "insurance",
-        "projectType": "library",
-        "tags": [],
-        "implicitDependencies": []
-      }
-    },
-    "shell": {
-      "name": "shell",
-      "type": "lib",
-      "data": {
-        "root": "libs/brokerAdmin/feature/shell",
-        "targets": {
-          "lint": {
-            "executor": "@nx/eslint:lint",
-            "options": {},
-            "configurations": {},
-            "parallelism": true,
-            "cache": true,
-            "inputs": [
-              "default",
-              "{workspaceRoot}/.eslintrc.json",
-              "{workspaceRoot}/.eslintignore",
-              "{workspaceRoot}/eslint.config.cjs"
-            ]
-          },
-          "test": {
-            "executor": "@nx/jest:jest",
-            "outputs": [
-              "{workspaceRoot}/coverage/{projectRoot}"
-            ],
-            "options": {
-              "jestConfig": "libs/brokerAdmin/feature/shell/jest.config.ts",
-              "passWithNoTests": true
-            },
-            "configurations": {
-              "ci": {
-                "ci": true,
-                "codeCoverage": true
-              }
-            },
-            "parallelism": true,
-            "cache": true,
-            "inputs": [
-              "default",
-              "^production",
-              "{workspaceRoot}/jest.preset.js"
-            ]
-          }
-        },
-        "name": "shell",
-        "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
-        "sourceRoot": "libs/brokerAdmin/feature/shell/src",
-        "prefix": "insurance",
-        "projectType": "library",
-        "tags": [],
-        "implicitDependencies": []
-      }
-    },
-    "auth": {
-      "name": "auth",
-      "type": "lib",
-      "data": {
-        "root": "libs/brokerAdmin/feature/auth",
-        "targets": {
-          "lint": {
-            "executor": "@nx/eslint:lint",
-            "options": {},
-            "configurations": {},
-            "parallelism": true,
-            "cache": true,
-            "inputs": [
-              "default",
-              "{workspaceRoot}/.eslintrc.json",
-              "{workspaceRoot}/.eslintignore",
-              "{workspaceRoot}/eslint.config.cjs"
-            ]
-          },
-          "test": {
-            "executor": "@nx/jest:jest",
-            "outputs": [
-              "{workspaceRoot}/coverage/{projectRoot}"
-            ],
-            "options": {
-              "jestConfig": "libs/brokerAdmin/feature/auth/jest.config.ts",
-              "passWithNoTests": true
-            },
-            "configurations": {
-              "ci": {
-                "ci": true,
-                "codeCoverage": true
-              }
-            },
-            "parallelism": true,
-            "cache": true,
-            "inputs": [
-              "default",
-              "^production",
-              "{workspaceRoot}/jest.preset.js"
-            ]
-          }
-        },
-        "name": "auth",
-        "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
-        "sourceRoot": "libs/brokerAdmin/feature/auth/src",
         "prefix": "insurance",
         "projectType": "library",
         "tags": [],
@@ -1148,8 +992,8 @@
         "implicitDependencies": []
       }
     },
-    "brokerAdmin-e2e": {
-      "name": "brokerAdmin-e2e",
+    "customer-e2e": {
+      "name": "customer-e2e",
       "type": "e2e",
       "data": {
         "root": "apps/brokerAdmin-e2e",
@@ -1200,7 +1044,7 @@
             },
             "configurations": {
               "production": {
-                "command": "cypress run --env webServerCommand=\"npx nx run brokerAdmin:serve-static\""
+                "command": "cypress run --env webServerCommand=\"npx nx run customer:serve-static\""
               }
             },
             "executor": "nx:run-commands"
@@ -1222,7 +1066,7 @@
             "cache": true,
             "options": {
               "cwd": "apps/brokerAdmin-e2e",
-              "command": "cypress run --env webServerCommand=\"npx nx run brokerAdmin:serve-static\" --spec src/e2e/app.cy.ts --config=\"{\\\"baseUrl\\\":\\\"http://localhost:4200\\\",\\\"e2e\\\":{\\\"videosFolder\\\":\\\"..\\\\\\\\..\\\\\\\\dist\\\\\\\\cypress\\\\\\\\apps\\\\\\\\brokerAdmin-e2e\\\\\\\\videos\\\\\\\\src-e2e-app-cy-ts\\\",\\\"screenshotsFolder\\\":\\\"..\\\\\\\\..\\\\\\\\dist\\\\\\\\cypress\\\\\\\\apps\\\\\\\\brokerAdmin-e2e\\\\\\\\screenshots\\\\\\\\src-e2e-app-cy-ts\\\"}}\""
+              "command": "cypress run --env webServerCommand=\"npx nx run customer:serve-static\" --spec src/e2e/app.cy.ts --config=\"{\\\"baseUrl\\\":\\\"http://localhost:4200\\\",\\\"e2e\\\":{\\\"videosFolder\\\":\\\"..\\\\\\\\..\\\\\\\\dist\\\\\\\\cypress\\\\\\\\apps\\\\\\\\brokerAdmin-e2e\\\\\\\\videos\\\\\\\\src-e2e-app-cy-ts\\\",\\\"screenshotsFolder\\\":\\\"..\\\\\\\\..\\\\\\\\dist\\\\\\\\cypress\\\\\\\\apps\\\\\\\\brokerAdmin-e2e\\\\\\\\screenshots\\\\\\\\src-e2e-app-cy-ts\\\"}}\""
             },
             "parallelism": false,
             "metadata": {
@@ -1350,12 +1194,12 @@
             "parallelism": true
           }
         },
-        "name": "brokerAdmin-e2e",
+        "name": "customer-e2e",
         "$schema": "../../node_modules/nx/schemas/project-schema.json",
-        "sourceRoot": "apps/brokerAdmin-e2e/src",
+        "sourceRoot": "apps/customer-e2e/src",
         "tags": [],
         "implicitDependencies": [
-          "brokerAdmin"
+          "customer"
         ]
       }
     },
@@ -1524,11 +1368,11 @@
         "implicitDependencies": []
       }
     },
-    "brokerAdmin": {
-      "name": "brokerAdmin",
+    "customer": {
+      "name": "customer",
       "type": "app",
       "data": {
-        "root": "apps/brokerAdmin",
+        "root": "apps/customer",
         "targets": {
           "lint": {
             "executor": "@nx/eslint:lint",
@@ -1549,13 +1393,13 @@
               "{options.outputPath}"
             ],
             "options": {
-              "outputPath": "dist/apps/brokerAdmin",
-              "index": "apps/brokerAdmin/src/index.html",
-              "main": "apps/brokerAdmin/src/main.ts",
+              "outputPath": "dist/apps/customer",
+              "index": "apps/customer/src/index.html",
+              "main": "apps/customer/src/main.ts",
               "polyfills": [
                 "zone.js"
               ],
-              "tsConfig": "apps/brokerAdmin/tsconfig.app.json",
+              "tsConfig": "apps/customer/tsconfig.app.json",
               "inlineStyleLanguage": "scss",
               "assets": [
                 {
@@ -1614,10 +1458,10 @@
             "executor": "@angular-devkit/build-angular:dev-server",
             "configurations": {
               "production": {
-                "buildTarget": "brokerAdmin:build:production"
+                "buildTarget": "customer:build:production"
               },
               "development": {
-                "buildTarget": "brokerAdmin:build:development"
+                "buildTarget": "customer:build:development"
               }
             },
             "defaultConfiguration": "development",
@@ -1627,7 +1471,7 @@
           "extract-i18n": {
             "executor": "@angular-devkit/build-angular:extract-i18n",
             "options": {
-              "buildTarget": "brokerAdmin:build"
+              "buildTarget": "customer:build"
             },
             "configurations": {},
             "parallelism": true
@@ -1638,7 +1482,7 @@
               "{workspaceRoot}/coverage/{projectRoot}"
             ],
             "options": {
-              "jestConfig": "apps/brokerAdmin/jest.config.ts",
+              "jestConfig": "apps/customer/jest.config.ts",
               "passWithNoTests": true
             },
             "configurations": {
@@ -1658,7 +1502,7 @@
           "serve-static": {
             "executor": "@nx/web:file-server",
             "options": {
-              "buildTarget": "brokerAdmin:build",
+              "buildTarget": "customer:build",
               "port": 4200,
               "spa": true
             },
@@ -1666,11 +1510,11 @@
             "parallelism": true
           }
         },
-        "name": "brokerAdmin",
+        "name": "customer",
         "$schema": "../../node_modules/nx/schemas/project-schema.json",
         "projectType": "application",
         "prefix": "app",
-        "sourceRoot": "apps/brokerAdmin/src",
+        "sourceRoot": "apps/customer/src",
         "tags": [],
         "implicitDependencies": []
       }
@@ -15890,33 +15734,6 @@
     }
   },
   "dependencies": {
-    "insurance-feature-user-management": [
-      {
-        "source": "insurance-feature-user-management",
-        "target": "npm:@nx/eslint-plugin",
-        "type": "static"
-      },
-      {
-        "source": "insurance-feature-user-management",
-        "target": "npm:@angular/core",
-        "type": "static"
-      },
-      {
-        "source": "insurance-feature-user-management",
-        "target": "npm:@angular/common",
-        "type": "static"
-      },
-      {
-        "source": "insurance-feature-user-management",
-        "target": "npm:@angular/router",
-        "type": "static"
-      },
-      {
-        "source": "insurance-feature-user-management",
-        "target": "npm:jest-preset-angular",
-        "type": "static"
-      }
-    ],
     "input-validation-message": [
       {
         "source": "input-validation-message",
@@ -16137,100 +15954,6 @@
       },
       {
         "source": "local-storage",
-        "target": "npm:jest-preset-angular",
-        "type": "static"
-      }
-    ],
-    "shell": [
-      {
-        "source": "shell",
-        "target": "npm:@nx/eslint-plugin",
-        "type": "static"
-      },
-      {
-        "source": "shell",
-        "target": "npm:@angular/core",
-        "type": "static"
-      },
-      {
-        "source": "shell",
-        "target": "npm:@angular/common",
-        "type": "static"
-      },
-      {
-        "source": "shell",
-        "target": "npm:@angular/forms",
-        "type": "static"
-      },
-      {
-        "source": "shell",
-        "target": "header-desktop",
-        "type": "static"
-      },
-      {
-        "source": "shell",
-        "target": "npm:@angular/material",
-        "type": "static"
-      },
-      {
-        "source": "shell",
-        "target": "npm:@angular/router",
-        "type": "static"
-      },
-      {
-        "source": "shell",
-        "target": "common",
-        "type": "static"
-      },
-      {
-        "source": "shell",
-        "target": "npm:jest-preset-angular",
-        "type": "static"
-      }
-    ],
-    "auth": [
-      {
-        "source": "auth",
-        "target": "npm:@nx/eslint-plugin",
-        "type": "static"
-      },
-      {
-        "source": "auth",
-        "target": "npm:@angular/core",
-        "type": "static"
-      },
-      {
-        "source": "auth",
-        "target": "npm:@angular/common",
-        "type": "static"
-      },
-      {
-        "source": "auth",
-        "target": "npm:@angular/forms",
-        "type": "static"
-      },
-      {
-        "source": "auth",
-        "target": "npm:@angular/router",
-        "type": "static"
-      },
-      {
-        "source": "auth",
-        "target": "common",
-        "type": "static"
-      },
-      {
-        "source": "auth",
-        "target": "npm:@angular/material",
-        "type": "static"
-      },
-      {
-        "source": "auth",
-        "target": "input-validation-message",
-        "type": "static"
-      },
-      {
-        "source": "auth",
         "target": "npm:jest-preset-angular",
         "type": "static"
       }
@@ -16473,24 +16196,24 @@
         "type": "static"
       }
     ],
-    "brokerAdmin-e2e": [
+    "customer-e2e": [
       {
-        "source": "brokerAdmin-e2e",
-        "target": "brokerAdmin",
+        "source": "customer-e2e",
+        "target": "customer",
         "type": "implicit"
       },
       {
-        "source": "brokerAdmin-e2e",
+        "source": "customer-e2e",
         "target": "npm:@nx/cypress",
         "type": "static"
       },
       {
-        "source": "brokerAdmin-e2e",
+        "source": "customer-e2e",
         "target": "npm:cypress",
         "type": "static"
       },
       {
-        "source": "brokerAdmin-e2e",
+        "source": "customer-e2e",
         "target": "npm:eslint-plugin-cypress",
         "type": "static"
       }
@@ -16603,114 +16326,104 @@
         "type": "static"
       }
     ],
-    "brokerAdmin": [
+    "customer": [
       {
-        "source": "brokerAdmin",
+        "source": "customer",
         "target": "npm:@nx/eslint-plugin",
         "type": "static"
       },
       {
-        "source": "brokerAdmin",
+        "source": "customer",
         "target": "npm:@angular/core",
         "type": "static"
       },
       {
-        "source": "brokerAdmin",
+        "source": "customer",
         "target": "npm:@angular/router",
         "type": "static"
       },
       {
-        "source": "brokerAdmin",
+        "source": "customer",
         "target": "alert",
         "type": "static"
       },
       {
-        "source": "brokerAdmin",
+        "source": "customer",
         "target": "web-sdk",
         "type": "static"
       },
       {
-        "source": "brokerAdmin",
+        "source": "customer",
         "target": "setting",
         "type": "static"
       },
       {
-        "source": "brokerAdmin",
+        "source": "customer",
         "target": "npm:@ngrx/router-store",
         "type": "static"
       },
       {
-        "source": "brokerAdmin",
+        "source": "customer",
         "target": "npm:@ngrx/store",
         "type": "static"
       },
       {
-        "source": "brokerAdmin",
+        "source": "customer",
         "target": "npm:@ngrx/effects",
         "type": "static"
       },
       {
-        "source": "brokerAdmin",
+        "source": "customer",
         "target": "npm:@ngrx/store-devtools",
         "type": "static"
       },
       {
-        "source": "brokerAdmin",
+        "source": "customer",
         "target": "app-core",
         "type": "static"
       },
       {
-        "source": "brokerAdmin",
+        "source": "customer",
         "target": "npm:@angular/platform-browser",
         "type": "static"
       },
       {
-        "source": "brokerAdmin",
+        "source": "customer",
         "target": "locales",
         "type": "static"
       },
       {
-        "source": "brokerAdmin",
+        "source": "customer",
         "target": "icon",
         "type": "static"
       },
       {
-        "source": "brokerAdmin",
+        "source": "customer",
         "target": "npm:@angular/common",
         "type": "static"
       },
       {
-        "source": "brokerAdmin",
+        "source": "customer",
         "target": "clientBridge",
         "type": "static"
       },
       {
-        "source": "brokerAdmin",
-        "target": "auth",
-        "type": "dynamic"
-      },
-      {
-        "source": "brokerAdmin",
-        "target": "shell",
-        "type": "dynamic"
-      },
-      {
-        "source": "brokerAdmin",
+        "source": "customer",
         "target": "npm:jest-preset-angular",
         "type": "static"
       },
       {
-        "source": "brokerAdmin",
+        "source": "customer",
         "target": "npm:@nx/angular",
         "type": "static"
       },
       {
-        "source": "brokerAdmin",
+        "source": "customer",
         "target": "tailwind-preset",
         "type": "static"
       },
       {
-        "source": "brokerAdmin",
+        "source": "customer",
         "target": "npm:tailwindcss",
         "type": "static"
       }

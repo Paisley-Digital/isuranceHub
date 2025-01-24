@@ -15,15 +15,15 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@insurance-brokerAdmin-feature-user-management": [
-        "libs/brokerAdmin/feature/user-management/src/index.ts"
-      ],
       "@./products": ["libs/clientBridge/feature/products/src/index.ts"],
-      "@insurance-brokerAdmin-feature-auth": [
-        "libs/brokerAdmin/feature/auth/src/index.ts"
+      "@insurance-customer-feature-auth": [
+        "libs/customer/feature/auth/src/index.ts"
       ],
-      "@insurance-brokerAdmin-feature-shell": [
-        "libs/brokerAdmin/feature/shell/src/index.ts"
+      "@insurance-customer-feature-shell": [
+        "libs/customer/feature/shell/src/index.ts"
+      ],
+      "@insurance-customer-feature-user-management": [
+        "libs/customer/feature/user-management/src/index.ts"
       ],
       "@insurance-clientBridge-feature-auth": [
         "libs/clientBridge/feature/auth/src/index.ts"

@@ -1,0 +1,115 @@
+.card-container {
+  padding: 80px;
+  height: 100%;
+}
+
+.widget-card {
+  @apply max-sm:rounded-none #{!important};
+
+  &.max-md-widget {
+    mat-card-content,
+    mat-card-actions {
+      @apply mx-auto w-full max-w-[900px];
+    }
+
+    mat-card-content {
+      @apply mt-6;
+    }
+
+    mat-card-actions {
+      @apply my-8 gap-4;
+    }
+
+    mat-card-actions > * {
+      @apply flex-1;
+    }
+  }
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.card-item {
+  margin: 0;
+}
+
+.example-card {
+  width: 306px;
+  height: 247px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  mat-card-header {
+    padding: 16px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .divider {
+    width: 100%;
+    height: 1px;
+    background-color: #ddd;
+    margin: 8px 0;
+  }
+
+  .content-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      max-width: 189px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 4px;
+      display: flex;
+      justify-content: center;
+      margin: auto;
+    }
+
+    div:last-child {
+      font-size: 14px;
+      color: #555;
+      text-align: center;
+    }
+  }
+}
+
+mat-dialog-actions {
+  @apply justify-start !important;
+  display: flex;
+  margin: 0;
+  padding: 8px;
+
+  button {
+    margin-right: 8px;
+  }
+}
+
+.backgroandButton {
+  @apply bg-blue-900 !important;
+}
+
+.error-state-container {
+  @apply flex flex-col items-center justify-center py-6 #{!important};
+
+  img {
+    @apply mx-auto #{!important};
+  }
+
+  .retry {
+    @apply text-sm sm:text-base #{!important};
+  }
+}

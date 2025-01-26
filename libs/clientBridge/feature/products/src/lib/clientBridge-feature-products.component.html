@@ -1,55 +1,57 @@
 <div class="card-container">
   <mat-card class="widget-card max-md-widget">
     <mat-card-content>
-      <form [formGroup]="uploadForm" class="flex flex-col h-full">
-        <h1>Personal information</h1>
-        <mat-form-field hideRequiredMarker>
-          <mat-label>Inter your first name</mat-label>
-          <input matInput formControlName="userName" />
-          <mat-error>
-            <insurance-error-message [input]="uploadForm.get('name')" />
-          </mat-error>
-        </mat-form-field>
-        <mat-form-field hideRequiredMarker>
-          <mat-label>Your birthday</mat-label>
-          <input matInput formControlName="userName" />
-          <mat-error>
-            <insurance-error-message [input]="uploadForm.get('birthDate')" />
-          </mat-error>
-          <button type="button" mat-icon-button matSuffix>
-            <mat-icon svgIcon="calendar" />
-          </button>
-        </mat-form-field>
-        <mat-form-field hideRequiredMarker>
-          <mat-label>Your national code</mat-label>
-          <input
-            matInput
-            formControlName="ntionalCode"
-            inputmode="numeric"
-            pattern="\d*"
-          />
-          <mat-error>
-            <insurance-error-message [input]="uploadForm.get('nationalCode')" />
-          </mat-error>
-        </mat-form-field>
-        <mat-form-field hideRequiredMarker>
-          <mat-label>Your number</mat-label>
-          <input matInput formControlName="number" />
-          <mat-error>
-            <insurance-error-message [input]="uploadForm.get('number')" />
-          </mat-error>
-          <button type="button" mat-icon-button matSuffix>
-            <mat-icon svgIcon="phone" />
-          </button>
-        </mat-form-field>
-        <mat-form-field hideRequiredMarker>
-          <mat-label>Address</mat-label>
-          <input matInput formControlName="address" />
-          <mat-error>
-            <insurance-error-message [input]="uploadForm.get('address')" />
-          </mat-error>
-        </mat-form-field>
-      </form>
+      <table mat-table
+             [dataSource]="dataSource"
+             cdkDropList
+             cdkDropListOrientation="horizontal"
+             (cdkDropListDropped)="drop($event)">
+
+        <ng-container matColumnDef="customer">
+          <th mat-header-cell cdkDrag *matHeaderCellDef>First Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="timeUpdate">
+          <th mat-header-cell cdkDrag *matHeaderCellDef> Date </th>
+          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="number">
+          <th mat-header-cell cdkDrag *matHeaderCellDef> Phone number</th>
+          <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+        </ng-container>
+        <ng-container matColumnDef="Nationalcode">
+          <th mat-header-cell cdkDrag *matHeaderCellDef> National code</th>
+          <td mat-cell *matCellDef="let element"> {{element.Nationalcode}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell cdkDrag *matHeaderCellDef> </th>
+          <td mat-cell *matCellDef="let element">
+            <button mat-icon-button>
+              <mat-icon svgIcon="chevron-right" (click)="navigateDetails()"></mat-icon>
+            </button>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="columns"></tr>
+        <tr mat-row *matRowDef="let row; columns: columns;"></tr>
+      </table>
+
+      <div class="flex items-center justify-between mt-4">
+        <mat-paginator
+          #paginator
+          class="custom-paginator"
+          (page)="handlePageEvent($event)"
+          [length]="length"
+          [pageSize]="pageSize"
+          [disabled]="disabled"
+          [showFirstLastButtons]="showFirstLastButtons"
+          [hidePageSize]="true"
+          [pageIndex]="pageIndex">
+        </mat-paginator>
+      </div>
     </mat-card-content>
   </mat-card>
 </div>

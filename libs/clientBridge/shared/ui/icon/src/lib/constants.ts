@@ -12,4 +12,9 @@ export const svgIconNames = [
   'calendar',
   'phone',
   'profile',
+  'chevron-right',
+  'add',
+  'scan',
+  'buliding',
+  'Excel'
 ] as const;

@@ -3,7 +3,7 @@
     <div class="relative flex flex-1 flex-wrap">
       @if ((isHandsetScreen$ | async) === false) {
         <div class="w-1/2">
-            <div class="cover-image"></div>
+          <div class="cover-image"></div>
         </div>
       }
       <div class="w-full max-sm:mt-8 md:flex md:w-1/2 md:items-center md:justify-center">
@@ -18,12 +18,17 @@
 </mat-drawer-container>
 
 <ng-template #login>
-  <div class="flex flex-col items-center max-sm:h-full max-sm:pb-8 w-full">
-    <h1 class="!flex !justify-start !w-full">
-      Welcome InsureTech
-    </h1>
+  <div class="flex flex-col max-sm:h-full max-sm:pb-8 w-full">
+    <div class="!flex !justify-start flex-col ">
+      <h1 class=" font-bold !w-full">
+        Welcome InsureTech
+      </h1>
+      <span class="text-xl relative text-[#71717A]  bottom-4">
+      Service management dashboard
+    </span>
+    </div>
     <div class="mt-10 w-full flex-1">
-        <ng-container [ngTemplateOutlet]="loginTemplate" />
+      <ng-container [ngTemplateOutlet]="loginTemplate"/>
     </div>
   </div>
 </ng-template>
@@ -32,34 +37,34 @@
   <form class="flex h-full flex-col" [formGroup]="loginForm">
     <div class="flex flex-1 flex-col">
       <div class="!mt-3 flex flex-col gap-3">
-      <mat-form-field  hideRequiredMarker class="!rounded-lg">
-        <mat-label>Your name</mat-label>
-        <input matInput formControlName="userName" />
-        <mat-error>
-          <insurance-error-message [input]="loginForm.get('userName')"/>
-        </mat-error>
-      </mat-form-field>
+        <mat-form-field hideRequiredMarker class="!rounded-lg">
+          <mat-label>Your name</mat-label>
+          <input matInput formControlName="userName"/>
+          <mat-error>
+            <insurance-error-message [input]="loginForm.get('userName')"/>
+          </mat-error>
+        </mat-form-field>
       </div>
       <div class="!mt-3 flex flex-col gap-3">
-      <mat-form-field hideRequiredMarker>
-        <mat-label>Your Password</mat-label>
-        <input
-          matInput
-          type="password"
-          [type]="showPassword() ? 'text' : 'password'"
-          formControlName="password" />
-        <mat-error>
-          <insurance-error-message [input]="loginForm.get('password')"/>
-        </mat-error>
-        <button
-          type="button"
-          mat-icon-button
-          matSuffix
-          (click)="isShowPassword()"
-          [attr.aria-pressed]="showPassword()">
-          <mat-icon [svgIcon]="showPassword() ? 'eye' : 'eye-slash'" />
-        </button>
-      </mat-form-field>
+        <mat-form-field hideRequiredMarker>
+          <mat-label>Your Password</mat-label>
+          <input
+            matInput
+            type="password"
+            [type]="showPassword() ? 'text' : 'password'"
+            formControlName="password"/>
+          <mat-error>
+            <insurance-error-message [input]="loginForm.get('password')"/>
+          </mat-error>
+          <button
+            type="button"
+            mat-icon-button
+            matSuffix
+            (click)="isShowPassword()"
+            [attr.aria-pressed]="showPassword()">
+            <mat-icon [svgIcon]="showPassword() ? 'eye' : 'eye-slash'"/>
+          </button>
+        </mat-form-field>
       </div>
       <div class="mt-3 flex items-start justify-between">
         <mat-checkbox class="example-margin" color="primary">Remember me</mat-checkbox>
@@ -69,7 +74,7 @@
         </a>
       </div>
       <button
-        mat-flat-button class="mt-8" (click)="navigateToProduct()">
+        mat-flat-button class="mt-8 !bg-[#0042A9]" (click)="navigateToProduct()">
         Log in
       </button>
     </div>

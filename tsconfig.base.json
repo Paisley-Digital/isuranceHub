@@ -16,15 +16,6 @@
     "baseUrl": ".",
     "paths": {
       "@./products": ["libs/clientBridge/feature/products/src/index.ts"],
-      "@insurance-customer-feature-auth": [
-        "libs/customer/feature/auth/src/index.ts"
-      ],
-      "@insurance-customer-feature-shell": [
-        "libs/customer/feature/shell/src/index.ts"
-      ],
-      "@insurance-customer-feature-user-management": [
-        "libs/customer/feature/user-management/src/index.ts"
-      ],
       "@insurance-clientBridge-feature-auth": [
         "libs/clientBridge/feature/auth/src/index.ts"
       ],
@@ -36,6 +27,15 @@
       ],
       "@insurance-clientBridge-shared-util-locales": [
         "libs/shared/util/locales/src/index.ts"
+      ],
+      "@insurance-customer-feature-auth": [
+        "libs/customer/feature/auth/src/index.ts"
+      ],
+      "@insurance-customer-feature-shell": [
+        "libs/customer/feature/shell/src/index.ts"
+      ],
+      "@insurance-customer-feature-user-management": [
+        "libs/customer/feature/user-management/src/index.ts"
       ],
       "@insurance-shared-data-setting": [
         "libs/shared/data/setting/src/index.ts"

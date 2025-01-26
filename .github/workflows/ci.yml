@@ -1,0 +1,48 @@
+name: CI/CD for clientBridge
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout the code
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # 2. Set up Node.js environment
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      # 3. Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # 4. Lint the code for clientBridge
+      - name: Lint clientBridge
+        run: npm run prettier:check
+
+      # 5. Run tests for clientBridge
+      - name: Run tests for clientBridge
+        run: npm run test:clientBridge -- --watch=false --browsers=ChromeHeadless
+
+      # 6. Build clientBridge
+      - name: Build clientBridge
+        run: npm run build:clientBridge
+
+      # 7. Deploy to GitHub Pages (Optional)
+      - name: Deploy to GitHub Pages
+        if: success()
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist/apps/clientBridge
